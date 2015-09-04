@@ -1,0 +1,79 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+some_articles_author:
+  evidence_source: some_article
+  name: author
+  content: Armbrust, Michael and Fox, Armando and Griffith, Rean and Joseph, Anthony D. and Katz, Randy and Konwinski, Andy and Lee, Gunho and Patterson, David and Rabkin, Ariel and Stoica, Ion and Zaharia, Matei
+some_articles_title:
+  evidence_source: some_article
+  name: title
+  content: A View of Cloud Computing
+some_articles_journal:
+  evidence_source: some_article
+  name: journal
+  content: Commun. ACM
+some_articles_issue_date:
+  evidence_source: some_article
+  name: issue_date
+  content: April 2010
+some_articles_volume:
+  evidence_source: some_article
+  name: volume
+  content: 53
+some_articles_number:
+  evidence_source: some_article
+  name: number
+  content: 4
+some_articles_month:
+  evidence_source: some_article
+  name: month
+  content: apr
+some_articles_year:
+  evidence_source: some_article
+  name: year
+  content: 2010
+some_articles_issn:
+  evidence_source: some_article
+  name: issn
+  content: 0001-0782
+some_articles_pages:
+  evidence_source: some_article
+  name: pages
+  content: 50--58
+some_articles_numpages:
+  evidence_source: some_article
+  name: numpages
+  content: 9
+some_articles_url:
+  evidence_source: some_article
+  name: url
+  content: http://doi.acm.org/10.1145/1721654.1721672
+some_articles_doi:
+  evidence_source: some_article
+  name: doi
+  content: 10.1145/1721654.1721672
+some_articles_acmid:
+  evidence_source: some_article
+  name: acmid
+  content: 1721672
+some_articles_publisher:
+  evidence_source: some_article
+  name: publisher
+  content: ACM
+some_articles_address:
+  evidence_source: some_article
+  name: address
+  content: New York, NY, USA
+
+some_mastersthesiss_author:
+  evidence_source: some_mastersthesis
+  name: author
+  content: Doe, John
+some_mastersthesiss_title:
+  evidence_source: some_mastersthesis
+  name: title
+  content: Development of Phytoplankton upon Lake Sediments During Solar Flares
+some_mastersthesiss_issue_date:
+  evidence_source: some_mastersthesis
+  name: issue_date
+  content: January 2014
