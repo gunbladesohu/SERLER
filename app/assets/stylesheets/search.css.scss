@@ -1,3 +1,14 @@
 // Place all the styles related to the Search controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "variables";
+main{
+   div.result{
+     padding:20px;
+     margin:20px;
+     background-color: $white;
+     border:$black solid 2px;
+
+   }
+ }

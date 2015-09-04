@@ -1,7 +1,7 @@
 Serler::Application.routes.draw do
   root :to => 'pages#index'
+  get 'search/:id'=>"search#index"
   resources :search
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

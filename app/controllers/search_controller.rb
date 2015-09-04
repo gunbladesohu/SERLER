@@ -1,5 +1,9 @@
 class SearchController < ApplicationController
   def index
-    @evidence=EvidenceItem.all
+    @search=EvidenceItem.search do
+      fulltext params[:q]
+    end
+    @evidence=@search.results
+    @q=:q
   end
 end

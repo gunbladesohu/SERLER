@@ -13,3 +13,7 @@
 @import "bootstrap";
 // Compass
 @import 'compass';
+@import "variables";
+body{
+  background-color: $gray;
+}
