@@ -7,14 +7,4 @@ class CreateEvidenceItems < ActiveRecord::Migration
       t.timestamps
     end
   end
-
-  def up
-    10.times do |i|
-      EvidenceItem.create(name: "EvidenceItem ##{i}", description: "#{i} EvidenceItem.")
-    end
-  end
-
-  def down
-    EvidenceItem.delete_all
-  end
 end
