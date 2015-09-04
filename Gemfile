@@ -7,15 +7,23 @@ gem 'rails', '3.2.16'
 
 gem 'sqlite3'
 
-# Bootstrap sass,
+# Add Bootstrap sass support,
 # for more info: https://github.com/twbs/bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'autoprefixer-rails'
 
+# Add Saas support
+# for more info: http://sass-lang.com/documentation/file.SASS_REFERENCE.html#rackrailsmerb_plugin
+gem "sass"
+
+# Add compass support
+# for more info: https://github.com/Compass/compass-rails
+gem 'sass-rails',   '~> 3.2.3'
+gem 'compass-rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
