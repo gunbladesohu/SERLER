@@ -1,0 +1,6 @@
+language: ruby
+rvm:
+ # this is what we got in the VM:
+ - "1.23.14"
+ - rbx
+# script: bundle exec rspec spec
