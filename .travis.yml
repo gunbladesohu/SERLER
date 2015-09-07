@@ -1,6 +1,15 @@
 language: ruby
 rvm:
- # this is what we got in the VM:
- - "1.23.14"
- - rbx
-# script: bundle exec rspec spec
+
+  # this is close to what we got in the VM:
+  - 1.26.10
+
+  - 1.9.2
+  - 1.9.3
+env:
+  - DB=sqlite
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - rake test
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
