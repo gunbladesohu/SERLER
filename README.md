@@ -1,3 +1,7 @@
+### master
+
+[![Build Status](https://travis-ci.org/sdm15stream2/serler.svg?branch=master)](https://travis-ci.org/sdm15stream2/serler)
+
 # dev info
 
 ## about the search engine - Sunspot
