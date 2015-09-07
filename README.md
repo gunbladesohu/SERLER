@@ -1,6 +1,7 @@
 ### master
 
 [![Build Status](https://travis-ci.org/sdm15stream2/serler.svg?branch=master)](https://travis-ci.org/sdm15stream2/serler)
+[![Coverage Status](https://coveralls.io/repos/sdm15stream2/serler/badge.svg?branch=develop&service=github)](https://coveralls.io/github/sdm15stream2/serler?branch=develop)
 
 # dev info
 
