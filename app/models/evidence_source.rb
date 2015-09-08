@@ -4,4 +4,6 @@ class EvidenceSource < AbstractUserCreatedModel
     conference inbook incollection inproceedings manual mastersthesis
     misc phdthesis proceedings techreport unpublished )
   has_many :bib_tex_tags, dependent: :destroy
+  # TODO: has_one :evidence_item
+  # TODO: has_many :research_designs
 end
