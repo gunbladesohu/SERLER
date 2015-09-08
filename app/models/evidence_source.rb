@@ -1,5 +1,5 @@
 class EvidenceSource < AbstractUserCreatedModel
-  attr_accessible :research_level :research_question
+  attr_accessible :research_level, :research_question
   # TODO: belongs_to :evidence_items
   # TODO: has_one :bibtex_type
   has_many :bib_tex_tags, dependent: :destroy
