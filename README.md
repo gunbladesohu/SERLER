@@ -1,22 +1,11 @@
-### master
+| master | develop | 
+| ------ | ------- |
+| [![Build Status](https://travis-ci.org/sdm15stream2/serler.svg?branch=master)](https://travis-ci.org/sdm15stream2/serler?branch=master)                                    | [![Build Status](https://travis-ci.org/sdm15stream2/serler.svg?branch=develop)](https://travis-ci.org/sdm15stream2/serler?branch=develop) |
+| [![Coverage Status](https://coveralls.io/repos/sdm15stream2/serler/badge.svg?branch=master&service=github)](https://coveralls.io/github/sdm15stream2/serler?branch=master) | [![Coverage Status](https://coveralls.io/repos/sdm15stream2/serler/badge.svg?branch=develop&service=github)](https://coveralls.io/github/sdm15stream2/serler?branch=develop) |
 
-[![Build Status](https://travis-ci.org/sdm15stream2/serler.svg?branch=master)](https://travis-ci.org/sdm15stream2/serler)
+[![Code Climate](https://codeclimate.com/github/sdm15stream2/serler/badges/gpa.svg)](https://codeclimate.com/github/sdm15stream2/serler)
 
-# dev info
-
-## about the search engine - Sunspot
-
-Sunspot is a Ruby library for expressive, powerful interaction with the Solr search engine. Sunspot is built on top of the RSolr library, which provides a low-level interface for Solr interaction; Sunspot provides a simple, intuitive, expressive DSL backed by powerful features for indexing objects and searching for them.
-
-* the gem have already added into Gemfiles
-* `bundle install`
-* Generate a default configuration file:
- * `rails generate sunspot_rails:install`
-* If sunspot_solr was installed, start the packaged Solr distribution with:
- * `bundle exec rake sunspot:solr:start` 
- * or `sunspot:solr:run` to start in foreground
-
-## general guidelines
+# Git guidelines
 
 Make sure you have read and understood the corresponding chapter in the book.
 
@@ -76,3 +65,19 @@ After you have cloned the repository to you computer (or VM):
     
     # push all branches (echo-login, develop, master in this case)
     git push -a
+
+# developer information
+
+(Those probably have to be moved to a proper plave!?)
+
+## search engine - Sunspot
+
+Sunspot is a Ruby library for expressive, powerful interaction with the Solr search engine. Sunspot is built on top of the RSolr library, which provides a low-level interface for Solr interaction; Sunspot provides a simple, intuitive, expressive DSL backed by powerful features for indexing objects and searching for them.
+
+* the gem have already added into Gemfiles
+* `bundle install`
+* Generate a default configuration file:
+ * `rails generate sunspot_rails:install`
+* If sunspot_solr was installed, start the packaged Solr distribution with:
+ * `bundle exec rake sunspot:solr:start` 
+ * or `sunspot:solr:run` to start in foreground

@@ -1,0 +1,41 @@
+bibtex_type_article:
+  name: article
+
+bibtex_type_book:
+  name: book
+
+bibtex_type_booklet:
+  name: booklet
+
+bibtex_type_conference:
+  name: conference
+
+bibtex_type_inbook:
+  name: inbook
+
+bibtex_type_incollection:
+  name: incollection
+
+bibtex_type_inproceedings:
+  name: inproceedings
+
+bibtex_type_manual:
+  name: manual
+
+bibtex_type_mastersthesis:
+  name: mastersthesis
+
+bibtex_type_misc:
+  name: misc
+
+bibtex_type_phdthesis:
+  name: phdthesis
+
+bibtex_type_proceedings:
+  name: proceedings
+
+bibtex_type_techreport:
+  name: techreport
+
+bibtex_type_unpublished:
+  name: unpublished
