@@ -7,19 +7,24 @@ gem 'rails', '3.2.16'
 
 gem 'sqlite3'
 
-# Add Bootstrap sass support,
-# for more info: https://github.com/twbs/bootstrap-sass
+# Add Bootstrap sass for nice : )
+# https://github.com/twbs/bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'autoprefixer-rails'
 
-# Add Saas support
-# for more info: http://sass-lang.com/documentation/file.SASS_REFERENCE.html#rackrailsmerb_plugin
+# Add Saas for css organization
+# http://sass-lang.com/documentation/file.SASS_REFERENCE.html#rackrailsmerb_plugin
 gem "sass"
 
-# Add compass support
-# for more info: https://github.com/Compass/compass-rails
+# Add compass for style mixins
+# https://github.com/Compass/compass-rails
 gem 'sass-rails',   '~> 3.2.3'
 gem 'compass-rails'
+
+# Add sunspot for search engine
+# https://github.com/sunspot/sunspot
+gem 'sunspot_rails'
+gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
 
 # Gems used only for assets and not required
 # in production environments by default.
