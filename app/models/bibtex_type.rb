@@ -1,4 +1,3 @@
-class BibtexType < ActiveRecord::Base
-  attr_accessible :name
+class BibtexType < AbstractFixedListItem
   has_many :evidence_sources
 end

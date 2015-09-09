@@ -1,0 +1,14 @@
+research_method_case_study:
+  name: "case study"
+
+research_method_field_observation:
+  name: "field observation"
+
+research_method_experiment:
+  name: experiment
+
+research_method_interview:
+  name: interview
+
+research_method_survey:
+  name: survey
