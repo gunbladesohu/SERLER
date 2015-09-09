@@ -1,6 +1,11 @@
-# dev info
+| master | develop | 
+| ------ | ------- |
+| [![Build Status](https://travis-ci.org/sdm15stream2/serler.svg?branch=master)](https://travis-ci.org/sdm15stream2/serler?branch=master)                                    | [![Build Status](https://travis-ci.org/sdm15stream2/serler.svg?branch=develop)](https://travis-ci.org/sdm15stream2/serler?branch=develop) |
+| [![Coverage Status](https://coveralls.io/repos/sdm15stream2/serler/badge.svg?branch=master&service=github)](https://coveralls.io/github/sdm15stream2/serler?branch=master) | [![Coverage Status](https://coveralls.io/repos/sdm15stream2/serler/badge.svg?branch=develop&service=github)](https://coveralls.io/github/sdm15stream2/serler?branch=develop) |
 
-## general guidelines
+[![Code Climate](https://codeclimate.com/github/sdm15stream2/serler/badges/gpa.svg)](https://codeclimate.com/github/sdm15stream2/serler)
+
+# Git guidelines
 
 Make sure you have read and understood the corresponding chapter in the book.
 
@@ -21,7 +26,8 @@ Make sure you have read and understood the corresponding chapter in the book.
 (I haven't tested this, so feel free to fix mistakes!)
 
 After you have cloned the repository to you computer (or VM):
-  
+
+```shell 
     # if you (e.g. team echo) start implmenenting a new feature (e.g. login):
     git checkout -b echo-login develop
     # initially push ("upload") your new branch
@@ -60,3 +66,31 @@ After you have cloned the repository to you computer (or VM):
     
     # push all branches (echo-login, develop, master in this case)
     git push -a
+```
+
+# developer information
+
+# initial steps
+
+After you have cloned the repository, you probably see *"A secret is required…"*.
+As Hao mentioned in #1, you need to generate a secret and write it to `config/initializers/secret_token.rb`.
+Here is a command to do so:
+```shell
+cd to/serler/root/directory
+echo "Serler::Application.config.secret_token = '$(rake secret)'" > \
+ config/initializers/secret_token.rb
+```
+
+(Those probably have to be moved to a proper plave!?)
+
+## search engine - Sunspot
+
+Sunspot is a Ruby library for expressive, powerful interaction with the Solr search engine. Sunspot is built on top of the RSolr library, which provides a low-level interface for Solr interaction; Sunspot provides a simple, intuitive, expressive DSL backed by powerful features for indexing objects and searching for them.
+
+* the gem have already added into Gemfiles
+* `bundle install`
+* Generate a default configuration file:
+ * `rails generate sunspot_rails:install`
+* If sunspot_solr was installed, start the packaged Solr distribution with:
+ * `bundle exec rake sunspot:solr:start` 
+ * or `sunspot:solr:run` to start in foreground
