@@ -1,4 +1,4 @@
-class BibTexTag < AbstractUserCreatedModel
+class BibtexTag < AbstractUserCreatedModel
   # naming according to http://www.bibtex.org/Format/
   attr_accessible :content, :name, :evidence_source
   # :name might be checked according to

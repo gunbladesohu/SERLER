@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150908083756) do
+ActiveRecord::Schema.define(:version => 20150909010230) do
 
-  create_table "bib_tex_tags", :force => true do |t|
+  create_table "bibtex_tags", :force => true do |t|
     t.string   "name"
     t.string   "content"
     t.integer  "evidence_source_id"

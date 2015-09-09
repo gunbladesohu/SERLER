@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BibTexTagTest < ActiveSupport::TestCase
+class BibtexTagTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

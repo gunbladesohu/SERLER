@@ -1,5 +1,3 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
 some_article:
   bibtex_type: bibtex_type_article
   research_level: example research level (what is this??)
