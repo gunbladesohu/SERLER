@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150908083756) do
+ActiveRecord::Schema.define(:version => 20150909015025) do
 
-  create_table "bib_tex_tags", :force => true do |t|
+  create_table "bibtex_tags", :force => true do |t|
     t.string   "name"
     t.string   "content"
     t.integer  "evidence_source_id"
@@ -33,6 +33,24 @@ ActiveRecord::Schema.define(:version => 20150908083756) do
     t.datetime "updated_at",        :null => false
     t.string   "research_question"
     t.integer  "bibtex_type_id"
+  end
+
+  create_table "evidence_sources_research_methods", :id => false, :force => true do |t|
+    t.integer "evidence_source_id"
+    t.integer "research_method_id"
+  end
+
+  create_table "research_methods", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "research_metrics", :force => true do |t|
+    t.string   "description"
+    t.integer  "evidence_source_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
 end

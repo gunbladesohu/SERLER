@@ -1,9 +1,9 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
 some_article:
   bibtex_type: bibtex_type_article
   research_level: example research level (what is this??)
+  research_methods: research_method_survey, research_method_case_study
 
 some_mastersthesis:
   bibtex_type: bibtex_type_mastersthesis
   research_level: another example research level (what is this??)
+  research_methods: research_method_field_observation

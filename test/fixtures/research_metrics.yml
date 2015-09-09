@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+research_metric_one:
+  description: "example research metric 1"
+  evidence_source: some_article
+
+research_metric_two:
+  description: "example research metric 2"
+  evidence_source: some_article
+
+research_metric_three:
+  description: "example research metric 3"
+  evidence_source: some_mastersthesis
