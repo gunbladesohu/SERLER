@@ -26,7 +26,8 @@ Make sure you have read and understood the corresponding chapter in the book.
 (I haven't tested this, so feel free to fix mistakes!)
 
 After you have cloned the repository to you computer (or VM):
-  
+
+```shell 
     # if you (e.g. team echo) start implmenenting a new feature (e.g. login):
     git checkout -b echo-login develop
     # initially push ("upload") your new branch
@@ -65,8 +66,20 @@ After you have cloned the repository to you computer (or VM):
     
     # push all branches (echo-login, develop, master in this case)
     git push -a
+```
 
 # developer information
+
+# initial steps
+
+After you have cloned the repository, you probably see *"A secret is required…"*.
+As Hao mentioned in #1, you need to generate a secret and write it to `config/initializers/secret_token.rb`.
+Here is a command to do so:
+```shell
+cd to/serler/root/directory
+echo "Serler::Application.config.secret_token = '$(rake secret)'" > \
+ config/initializers/secret_token.rb
+```
 
 (Those probably have to be moved to a proper plave!?)
 
