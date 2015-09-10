@@ -5,8 +5,6 @@ gem 'rails', '3.2.16'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
 # Add Bootstrap sass support,
 # for more info: https://github.com/twbs/bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3.5'
@@ -21,6 +19,8 @@ gem "sass"
 gem 'sass-rails',   '~> 3.2.3'
 gem 'compass-rails'
 
+gem 'jquery-rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -32,7 +32,18 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+group :development, :test do
+  gem 'sqlite3'
+  gem 'coveralls', require: false
+
+  # To use debugger
+  # gem 'debugger'
+
+end
+
+group :production do
+  gem 'pg'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -45,8 +56,3 @@ gem 'jquery-rails'
 
 # Deploy with Capistrano
 # gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
-
-gem 'coveralls', require: false
