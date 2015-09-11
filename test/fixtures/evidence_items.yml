@@ -1,7 +1,14 @@
-one:
-  result: MyString
-  benefit: MyString
+evidence_item_one:
+  result: result of evidence item one
+  benefit: benefit of evidence item one
+  evidence_source: some_article
 
-two:
-  result: MyString
-  benefit: MyString
+evidence_item_two:
+  result: result of evidence item two
+  benefit: benefit of evidence item two
+  evidence_source: some_mastersthesis
+
+evidence_item_three:
+  result: result of evidence item three
+  benefit: benefit of evidence item three
+  evidence_source: some_mastersthesis
