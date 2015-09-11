@@ -19,11 +19,18 @@ gem "sass"
 gem 'sass-rails',   '~> 3.2.3'
 gem 'compass-rails'
 
+<<<<<<< HEAD
 # Add sunspot for search engine
 # https://github.com/sunspot/sunspot
 gem 'sunspot_rails'
 
 gem 'jquery-rails'
+=======
+# Add sunspot search
+# for more info: https://github.com/sunspot/sunspot
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+>>>>>>> hao
 
 # Gems used only for assets and not required
 # in production environments by default.
