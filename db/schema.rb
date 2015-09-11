@@ -27,6 +27,13 @@ ActiveRecord::Schema.define(:version => 20150909015025) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "evidence_items", :force => true do |t|
+    t.string   "result"
+    t.string   "benefit"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "evidence_sources", :force => true do |t|
     t.string   "research_level"
     t.datetime "created_at",        :null => false
@@ -42,7 +49,6 @@ ActiveRecord::Schema.define(:version => 20150909015025) do
 
   create_table "research_methods", :force => true do |t|
     t.string   "name"
-
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -52,13 +58,6 @@ ActiveRecord::Schema.define(:version => 20150909015025) do
     t.integer  "evidence_source_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
-  end
-
-  create_table "evidence_items", :force => true do |t|
-    t.string   "result"
-    t.string   "benefit"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
 end
