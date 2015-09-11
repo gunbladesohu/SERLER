@@ -1,4 +1,4 @@
-class EvidenceItem < ActiveRecord::Base
+class EvidenceItem < AbstractUserCreatedModel
   attr_accessible :benefit, :result
   belongs_to :evidence_source
 
