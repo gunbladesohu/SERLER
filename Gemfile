@@ -43,6 +43,8 @@ group :development, :test do
   # pre-packaged Solr distribution for use in development:
   gem 'sunspot_solr'
 
+  gem 'rspec-rails'
+
   # To use debugger
   # gem 'debugger'
 end
