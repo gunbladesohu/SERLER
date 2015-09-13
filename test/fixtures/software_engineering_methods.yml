@@ -1,0 +1,24 @@
+software_engineering_method_pairprogramming:
+  name: pair programming
+  description: Pair programming is an agile software development technique in which two programmers work as a pair together on one workstation. (Wikipedia)
+  software_engineering_methodologies: xp
+
+software_engineering_method_sprintplanning:
+  name: sprint planning
+  description: At the beginning of a sprint, the team holds a sprint planning event. (Wikipedia)
+  software_engineering_methodologies: scrum
+
+software_engineering_method_dailyscrum:
+  name: daily scrum
+  description: Each day during a sprint, the team holds a daily scrum (or stand-up) with specific guidelines. (Wikipedia)
+  software_engineering_methodologies: scrum
+
+software_engineering_method_sprint_review_and_retrospective:
+  name: sprint review and sprint retrospective
+  description: "At the end of a sprint, the team holds two events: the sprint review and the sprint retrospective. (Wikipedia)"
+  software_engineering_methodologies: scrum
+
+software_engineering_method_test_driven:
+  name: test driven development
+  description: "Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that test, and finally refactors the new code to acceptable standards. (Wikipedia)"
+  software_engineering_methodologies: scrum, xp

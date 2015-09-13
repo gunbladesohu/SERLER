@@ -2,13 +2,19 @@ evidence_item_one:
   result: result of evidence item one
   benefit: benefit of evidence item one
   evidence_source: some_article
+  software_engineering_methodologies: scrum
+  software_engineering_methods: software_engineering_method_dailyscrum
 
 evidence_item_two:
   result: result of evidence item two
   benefit: benefit of evidence item two
   evidence_source: some_mastersthesis
+  software_engineering_methodologies: scrum
+  software_engineering_methods: software_engineering_method_dailyscrum, software_engineering_method_sprint_review_and_retrospective
 
 evidence_item_three:
   result: result of evidence item three
   benefit: benefit of evidence item three
   evidence_source: some_mastersthesis
+  software_engineering_methodologies: scrum, xp
+  software_engineering_methods: software_engineering_method_sprint_review_and_retrospective, software_engineering_method_test_driven
