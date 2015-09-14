@@ -5,5 +5,5 @@ class EvidenceSource < AbstractUserCreatedModel
   has_many :bibtex_tags, dependent: :destroy
   has_many :research_metrics, dependent: :destroy
   has_and_belongs_to_many :research_methods
-  # TODO: has_many :research_participants
+  has_and_belongs_to_many :participant_types
 end
