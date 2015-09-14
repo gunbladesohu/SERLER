@@ -16,7 +16,7 @@ gem "sass"
 
 # Add compass for style mixins
 # https://github.com/Compass/compass-rails
-gem 'sass-rails',   '~> 3.2.3'
+gem 'sass-rails',   '~> 3.2.5'
 gem 'compass-rails'
 
 # Add sunspot for search engine
