@@ -58,5 +58,8 @@ module Serler
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # precompile the following assets (added for Heroku)
+    config.assets.precompile = %w( *.js *.css )
   end
 end
