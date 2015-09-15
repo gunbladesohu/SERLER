@@ -34,3 +34,9 @@ bower.json
 
 # Ignore rubymine setting
 .idea
+
+# Ignore sunspot local index
+# If error, please run rails generate sunspot_rails:install
+# Then bundle exec rake sunspot:solr:start
+# To start the search engine
+.solr
