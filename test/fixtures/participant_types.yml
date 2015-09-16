@@ -1,0 +1,8 @@
+participant_type_undergraduates:
+  name: undergraduate students
+
+participant_type_postgraduates:
+  name: postgraduate students
+
+participant_type_practitioners:
+  name: practitioners

@@ -1,0 +1,7 @@
+scrum:
+  name: SCRUM
+  description: Scrum is an iterative and incremental agile software development methodology for managing product development. (Wikipedia)
+
+xp:
+  name: Extreme Programing
+  description: Extreme programming (XP) is a software development methodology which is intended to improve software quality and responsiveness to changing customer requirements. (Wikipedia)
