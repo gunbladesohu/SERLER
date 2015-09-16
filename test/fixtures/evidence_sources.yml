@@ -2,8 +2,10 @@ some_article:
   bibtex_type: bibtex_type_article
   research_level: example research level (what is this??)
   research_methods: research_method_survey, research_method_case_study
+  participant_types: participant_type_practicioners
 
 some_mastersthesis:
   bibtex_type: bibtex_type_mastersthesis
   research_level: another example research level (what is this??)
   research_methods: research_method_field_observation
+  participant_types: participant_type_undergraduates, participant_type_postgraduates

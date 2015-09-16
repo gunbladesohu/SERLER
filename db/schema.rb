@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150909015025) do
+ActiveRecord::Schema.define(:version => 20150914003204) do
 
   create_table "bibtex_tags", :force => true do |t|
     t.string   "name"
@@ -27,6 +27,24 @@ ActiveRecord::Schema.define(:version => 20150909015025) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "evidence_items", :force => true do |t|
+    t.string   "result"
+    t.string   "benefit"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.integer  "evidence_source_id"
+  end
+
+  create_table "evidence_items_software_engineering_methodologies", :id => false, :force => true do |t|
+    t.integer "evidence_item_id"
+    t.integer "software_engineering_methodology_id"
+  end
+
+  create_table "evidence_items_software_engineering_methods", :id => false, :force => true do |t|
+    t.integer "evidence_item_id"
+    t.integer "software_engineering_method_id"
+  end
+
   create_table "evidence_sources", :force => true do |t|
     t.string   "research_level"
     t.datetime "created_at",        :null => false
@@ -35,9 +53,20 @@ ActiveRecord::Schema.define(:version => 20150909015025) do
     t.integer  "bibtex_type_id"
   end
 
+  create_table "evidence_sources_participant_types", :id => false, :force => true do |t|
+    t.integer "evidence_source_id"
+    t.integer "participant_type_id"
+  end
+
   create_table "evidence_sources_research_methods", :id => false, :force => true do |t|
     t.integer "evidence_source_id"
     t.integer "research_method_id"
+  end
+
+  create_table "participant_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "research_methods", :force => true do |t|
@@ -51,6 +80,25 @@ ActiveRecord::Schema.define(:version => 20150909015025) do
     t.integer  "evidence_source_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+  end
+
+  create_table "software_engineering_methodologies", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "software_engineering_methodologies_software_engineering_methods", :id => false, :force => true do |t|
+    t.integer "software_engineering_method_id"
+    t.integer "software_engineering_methodology_id"
+  end
+
+  create_table "software_engineering_methods", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end
