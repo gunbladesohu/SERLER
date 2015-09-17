@@ -15,8 +15,10 @@
 
 // Compass
 @import 'compass';
+// legacy display background color
 @import "variables";
 
 body{
   background-color: $gray;
 }
+// legacy end

@@ -1,7 +1,9 @@
 Serler::Application.routes.draw do
   root :to => 'pages#index'
+    # legacy add search routes
   get 'search/:id'=>"search#index"
   resources :search
+    # legacy end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
