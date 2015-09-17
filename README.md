@@ -7,6 +7,7 @@
 [![Code Climate](https://codeclimate.com/github/sdm15stream2/serler/badges/gpa.svg)](https://codeclimate.com/github/sdm15stream2/serler)
 
 ### please also refer to the [Wiki](https://github.com/sdm15stream2/serler/wiki)
+### [getting started](https://github.com/sdm15stream2/serler/wiki#getting-started-beta) if you are new here
 
 # Git guidelines
 
