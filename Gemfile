@@ -22,6 +22,8 @@ gem 'compass-rails'
 # Add sunspot for search engine
 # https://github.com/sunspot/sunspot
 gem 'sunspot_rails'
+# pre-packaged Solr distribution - in case of these vendors -_-!!
+gem 'sunspot_solr'
 
 gem 'jquery-rails'
 
@@ -39,9 +41,6 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'coveralls', require: false
-
-  # pre-packaged Solr distribution for use in development:
-  gem 'sunspot_solr'
 
   gem 'rspec-rails'
 
