@@ -46,6 +46,9 @@ group :development, :test do
 
   # To use debugger
   # gem 'debugger'
+
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
 end
 
 group :production do
