@@ -39,4 +39,9 @@ bower.json
 # Then bundle exec rake sunspot:solr:start
 # To start the search engine
 # ignore log file
-solr/development/data/
+/solr/data
+/solr/test
+/solr/development
+/solr/default/data
+/solr/pids
+/log/*.log.lck
