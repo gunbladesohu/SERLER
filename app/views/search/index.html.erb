@@ -1,22 +1,18 @@
-
-<!-- legacy file -->
-
 <main class="col-md-10 col-md-offset-1">
-<h2>search result</h2>
-  <% if @evidence.length==0 %>
-      <p>nothing!</p>
-  <% else %>
-      <% @evidence.each do |e| %>
-          <div class="result">
-            <p>
-              <strong>result</strong>
-              <%= e.result %>
-            </p>
-            <p>
-              <strong>benefit</strong>
-              <%= e.benefit %>
-            </p>
-          </div>
-      <% end %>
-  <% end %>
-</main>
+
+<div class="page-header">
+  <h2>dummy search result</h2>
+</div>
+
+<% @evidence_items.each do |e| %>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <strong>result</strong>
+      <%= e.result %>
+    </li>
+    <li class="list-group-item">
+      <strong>benefit</strong>
+      <%= e.benefit %>
+    </li>
+  </ul>
+<% end %>
