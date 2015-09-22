@@ -68,3 +68,4 @@ end
 # gem 'capistrano'
 
 gem 'social-share-button'
+gem 'jquery-datatables-rails', '~> 3.3.0'
