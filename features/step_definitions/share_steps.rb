@@ -1,5 +1,7 @@
-When(/^I click on a share buttons$/) do
+When(/^I click on facebook "(.*?)" button$/) do |share|
+	click_on(share)
 end
 
-Then(/^I should be able to send a current search results to social media$/) do
+Then(/^search results should be sent to facebook$/) do
+	assert page.has_content(/search results sent to facebook/i)
 end

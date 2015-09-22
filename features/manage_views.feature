@@ -4,6 +4,7 @@ Feature: Manage Views
   So that I can view a lot of information easily.
 
  Scenario: View
-    Given I have results of a search 
-    When I perform a search
+    Given I'm logged in as user
+    When I fill in "search" with "saasbook"
+    And I click on "search" button
     Then I should see results in a table
