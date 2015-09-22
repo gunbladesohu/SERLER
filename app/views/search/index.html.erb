@@ -6,49 +6,20 @@
 
 <table class="table">
   <thead>
-    <td>column a</td>
-    <td>column b</td>
+    <tr>
+      <th>result</th>
+      <th>benefit</th>
+    </tr>
   </thead>
   <tbody>
-    <td>val a</td>
-    <td>val b</td>
+    <% @evidence_items.each do |e| %>
+      <tr>
+        <td><%= e.result %></td>
+        <td><%= e.benefit %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
-
-<div class="panel panel-default">
-  <div class="panel-heading">results</div>
-  <div class="panel-body">
-    <div class="list-group">
-      <% @evidence_items.each do |e| %>
-        <a href="#" class="list-group-item">
-          <h4 class="list-group-item-heading"><%= e.result %></h4>
-          <% @columns_enabled.each do |c| %>
-            <p>
-              <strong><%= c.humanize %>:</strong>
-              <%= e.send c %>
-            </p>
-          <% end %>
-        </a>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-<%= form_tag("/search", method: "post") do %>
-<div class="panel panel-default">
-  <div class="panel-heading">columns to display</div>
-  <div class="panel-body">
-    <% @columns_available.each do |d| %>
-      <div class="input-group">
-        <%= check_box_tag(d) %>
-        <%= label_tag(d, d.humanize) %>
-      </div>
-    <% end %>
-    <div class="input-group">
-      <%= submit_tag("update") %>
-    </div>
-  </div>
-</div>
 
 <div class="panel panel-default">
   <div class="panel-heading">share this page</div>
@@ -58,4 +29,3 @@
     ) %>
   </div>
 </div>
-<% end %>
