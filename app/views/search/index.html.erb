@@ -4,15 +4,21 @@
   <h2>dummy search result</h2>
 </div>
 
-<% @evidence_items.each do |e| %>
-  <ul class="list-group">
-    <li class="list-group-item">
-      <strong>result</strong>
-      <%= e.result %>
-    </li>
-    <li class="list-group-item">
-      <strong>benefit</strong>
-      <%= e.benefit %>
-    </li>
-  </ul>
-<% end %>
+<div class="list-group">
+  <% @evidence_items.each do |e| %>
+    <a href="#" class="list-group-item">
+      <h4 class="list-group-item-heading"><%= e.result %></h4>
+      <p class="list-group-item-text"><%= e.benefit %></p>
+    </a>
+  <% end %>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">share this page</div>
+  <div class="panel-body">
+    <%= social_share_button_tag(
+      "Serler search results for '#{@search_query}'"
+    ) %>
+  </div>
+</div>

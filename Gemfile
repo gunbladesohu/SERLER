@@ -66,3 +66,5 @@ end
 
 # Deploy with Capistrano
 # gem 'capistrano'
+
+gem 'social-share-button'
