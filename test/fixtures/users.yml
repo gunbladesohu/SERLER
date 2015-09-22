@@ -1,0 +1,10 @@
+# test users
+david:
+  name: David Lewis
+  profession: Systems development
+  role: admin
+
+steve:
+  name: Steve Ross
+  profession: Student
+  role: moderator
