@@ -2,8 +2,8 @@
  <main>
   <h1>    Welcome to SELER  </h1>
   <%= form_tag("/search", method: "get") do %>
-      <%= label_tag(:q, "Search for:") %>
-      <%= text_field_tag(:q) %>
-      <%= submit_tag("Search",:name => nil) %>
+      <%= label_tag(:query, "Search for:") %>
+      <%= text_field_tag(:query) %>
+      <%= submit_tag("Search") %>
   <% end %>
 </main>
