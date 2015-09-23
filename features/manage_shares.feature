@@ -5,7 +5,16 @@ Feature: Manage Shares
 
  Scenario: Share
     Given I'm logged in as user
-    When I fill in "search" with "saasbook"
-    And I click on "search" button
-    And I click on facebook "share" button
+    And I am on the index page
+    When I fill in "Search for:" with "saasbook"
+    And I click on "Search" button
+    And I click on facebook "Share to Facebook" button
     Then search results should be sent to facebook
+
+ Scenario: Share
+    Given I'm logged in as user
+    And I am on the index page
+    When I fill in "Search for:" with "saasbook"
+    And I click on "Search" button
+    And I click on facebook "Share to Email" button
+    Then search results should be sent via email

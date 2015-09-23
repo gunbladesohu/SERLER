@@ -6,6 +6,6 @@ Feature: Manage Views
  Scenario: View
     Given I'm logged in as user
     And I am on the index page
-    When I fill in "query" with "saasbook"
+    When I fill in "Search for:" with "saasbook"
     And I click on "Search" button
     Then I should see results in a table

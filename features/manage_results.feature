@@ -5,7 +5,8 @@ Feature: Sort Results
 
  Scenario: Sort
     Given I'm logged in as user
-    When I fill in "search" with "saasbook"
-    And I click on "search" button
-    And I click on a "date" column
+    And I am on the index page
+    When I fill in "Search for:" with "saasbook"
+    And I click on "Search" button
+    And I click on a "result" column
     Then I should see results resorted
