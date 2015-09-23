@@ -7,7 +7,7 @@ gem 'rails', '3.2.16'
 
 # Add Bootstrap sass support,
 # for more info: https://github.com/twbs/bootstrap-sass
-gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bootstrap-sass', '3.1.1.0'
 gem 'autoprefixer-rails'
 
 # Add Saas for css organization
