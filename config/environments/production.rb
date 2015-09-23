@@ -45,8 +45,18 @@ Serler::Application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"
 
-  # Precompile additional assets (application.js, application.scss, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( *.js *.css )
+  # Precompile all assets in app/assets (application.js, application.scss,
+  # and all non-JS/CSS are already added)
+  # thanks to http://stackoverflow.com/a/15553781
+  config.assets.precompile << Proc.new { |path|
+    if path =~ /\.(css|js)\z/
+      full_path = Rails.application.assets.resolve(path).to_path
+      app_assets_path = Rails.root.join('app', 'assets').to_path
+      ((full_path.starts_with? app_assets_path) && (!path.starts_with? '_'))
+    else
+      false
+    end
+  }
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
