@@ -21,9 +21,13 @@ gem 'compass-rails'
 
 # Add sunspot for search engine
 # https://github.com/sunspot/sunspot
-gem 'sunspot_rails'
+#gem 'sunspot_rails'
 # pre-packaged Solr distribution - in case of these vendors -_-!!
-gem 'sunspot_solr'
+#gem 'sunspot_solr'
+
+# Add ransack
+# https://github.com/activerecord-hackery/ransack
+gem 'ransack'
 
 gem 'jquery-rails'
 
