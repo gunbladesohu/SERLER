@@ -1,10 +1,8 @@
  <main>
-
   <h1>Welcome to SERLER</h1>
      <%= search_form_for @search do |f| %>
-     <%= f.label :description_cont, "description contains" %>
-     <%= f.search_field :description_cont %>
-     <% f.submit "search" %>
+     <%= f.label :benefit_cont, "benefit contains" %>
+     <%= f.search_field :benefit_cont %>
+     <%= f.submit "search" %>
      <% end %>
-
 </main>
