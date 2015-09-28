@@ -1,8 +1,6 @@
 Serler::Application.routes.draw do
   root :to => 'pages#index'
   get 'search' => 'search#index', :as => :evidence_items
-    map.pages '/pages', :controller =>"home", :action=>"index"
-  #resources :search 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
