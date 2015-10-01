@@ -3,6 +3,8 @@ Serler::Application.routes.draw do
   get 'search' => 'search#index', :as => :evidence_items
 
   resources :search_results
+  resources :search_url
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,17 @@
+<h1>Listing Saved URL</h1>
+
+<%= link_to "Home", root_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Comment</th>
+    <th>URL</th>
+  </tr>
+  <% @search_url.each do |u| %>
+  <tr>
+    <td><%= u.name %></td>
+    <td><%= u.comment %></td>
+    <td><%= link_to 'GO to this URL', u.address %></td>
+  </tr>
+  <% end %>
+</table>
