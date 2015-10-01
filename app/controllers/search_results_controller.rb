@@ -7,8 +7,7 @@ class SearchResultsController < ApplicationController
   def create
     @search_result = SearchResult.new(params[:search_result])
     if @search_result.save
-      # todo: needs meaningful redirect
-      redirect_to root_path
+      redirect_to :back
     end
   end
 
