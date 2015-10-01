@@ -50,9 +50,19 @@
 
   <div class="col-md-5">
     <div class="panel panel-default">
-      <div class="panel-heading">save search</div>
+      <div class="panel-heading">save search query</div>
       <div class="panel-body">
-        <%= form_for @search_url, url:{controller: "search_url", action:"create"} do |f| %>
+        <%= form_for @saved_query do |f| %>
+
+
+          <% if @saved_query.errors.any? %>
+            <% @saved_query.errors.full_messages.each do |msg| %>
+              <div class="alert alert-danger" role="alert">
+                <%= msg %>
+              </div>
+            <% end %>
+          <% end %>
+
           <p class="input-group">
             <%= f.text_field :name, placeholder: "name", class: "form-control" %>
           </p>
@@ -61,7 +71,7 @@
             <%= f.text_area :comment, placeholder: "comment", class: "form-control", rows: "3" %>
           </p>
         <%= f.text_field :address, value: request.original_url, type: "hidden"  %>
-        <%= f.submit "Save", class: "btn btn-primary", name:"save_search_query" %>
+        <%= f.submit "Save", class: "btn btn-primary", name:"save_query" %>
         <% end %>
       </div>
     </div>
@@ -69,12 +79,12 @@
 
   <div class="col-md-5">
     <div class="panel panel-default">
-      <div class="panel-heading">save results</div>
+      <div class="panel-heading">save search results</div>
       <div class="panel-body">
-        <%= form_for @search_result do |f| %>
+        <%= form_for @saved_result do |f| %>
 
-          <% if @search_result.errors.any? %>
-            <% @search_result.errors.full_messages.each do |msg| %>
+          <% if @saved_result.errors.any? %>
+            <% @saved_result.errors.full_messages.each do |msg| %>
               <div class="alert alert-danger" role="alert">
                 <%= msg %>
               </div>
@@ -90,7 +100,7 @@
           </p>
 
           <%-# a hidden field containing the found evidence items -%>
-          <%= select_tag 'search_result[evidence_item_ids][]',
+          <%= select_tag 'saved_result[evidence_item_ids][]',
                           options_from_collection_for_select(
                             @evidence_items,
                             :id,
@@ -99,7 +109,7 @@
                           ),
                           {:multiple => true, :hidden => :hidden } %>
 
-        <%= f.submit "Save", class: "btn btn-primary", name:"save_search_results" %>
+        <%= f.submit "Save", class: "btn btn-primary", name:"save_results" %>
         <% end %>
       </div>
     </div>
