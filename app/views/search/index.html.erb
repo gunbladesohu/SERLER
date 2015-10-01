@@ -72,7 +72,7 @@
           </div>
 
           <%-# a hidden field containing the found evidence items -%>
-          <%= select_tag 'search_result[evidence_items][]',
+          <%= select_tag 'search_result[evidence_item_ids][]',
                           options_from_collection_for_select(
                             @evidence_items,
                             :id,
