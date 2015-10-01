@@ -1,0 +1,2 @@
+module SearchUrlHelper
+end

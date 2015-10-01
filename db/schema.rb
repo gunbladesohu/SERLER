@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20151001022318) do
+ActiveRecord::Schema.define(:version => 20151001083111) do
 
   create_table "bibtex_tags", :force => true do |t|
     t.string   "name"
@@ -90,6 +90,14 @@ ActiveRecord::Schema.define(:version => 20151001022318) do
   create_table "search_results", :force => true do |t|
     t.string   "name"
     t.string   "comment"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "search_urls", :force => true do |t|
+    t.string   "name"
+    t.text     "comment"
+    t.string   "address"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

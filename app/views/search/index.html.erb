@@ -52,7 +52,17 @@
     <div class="panel panel-default">
       <div class="panel-heading">save search</div>
       <div class="panel-body">
-
+        <%= form_for @search_url, url:{controller: "search_url", action:"create"} do |f| %>
+          <p class="input-group">
+            <%= f.text_field :name, placeholder: "name", class: "form-control" %>
+          </p>
+          
+          <p class="input-group">
+            <%= f.text_area :comment, placeholder: "comment", class: "form-control",rows: "3" %>
+          </p>
+        <%= f.text_field :address, value: request.original_url,type: "hidden"  %>
+        <%= f.submit "Save",class: "btn btn-primary",name:""%>
+        <% end %>
       </div>
     </div>
   </div>
@@ -63,13 +73,13 @@
       <div class="panel-body">
         <%= form_for @search_result, url: {controller: "search_results", action: "create"} do |f| %>
 
-          <div class="input-group">
+          <p class="input-group">
             <%= f.text_field :name, placeholder: "name", class: "form-control" %>
-          </div>
+          </p>
 
-          <div class="input-group">
-            <%= f.text_field :comment, placeholder: "comment", class: "form-control" %>
-          </div>
+          <p class="input-group">
+            <%= f.text_area :comment, placeholder: "comment", class: "form-control", rows: "3" %>
+          </p>
 
           <%-# a hidden field containing the found evidence items -%>
           <%= select_tag 'search_result[evidence_item_ids][]',
@@ -81,7 +91,7 @@
                           ),
                           {:multiple => true, :hidden => :hidden } %>
 
-          <%= f.submit "Save" %>
+        <%= f.submit "Save",class: "btn btn-primary",name:"" %>
         <% end %>
       </div>
     </div>
