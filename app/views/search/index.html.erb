@@ -29,7 +29,7 @@
       <th class="initially-hidden">created</th>
     </tr>
   </thead>
-    <% @result.each do |e| %>
+    <% @evidence_items.each do |e| %>
       <tr>
         <td><%= e.result %></td>
         <td><%= e.benefit %></td>
@@ -46,11 +46,56 @@
     <% end %>
 </table>
 
-<div class="panel panel-default">
-  <div class="panel-heading">share this page</div>
-  <div class="panel-body">
-    <%= social_share_button_tag(
-      "Serler search results for '#{@search_query}'"
-    ) %>
+<div class="row">
+
+  <div class="col-md-5">
+    <div class="panel panel-default">
+      <div class="panel-heading">save search</div>
+      <div class="panel-body">
+
+      </div>
+    </div>
   </div>
+
+  <div class="col-md-5">
+    <div class="panel panel-default">
+      <div class="panel-heading">save results</div>
+      <div class="panel-body">
+        <%= form_for @search_result, url: {controller: "search_results", action: "create"} do |f| %>
+
+          <div class="input-group">
+            <%= f.text_field :name, placeholder: "name", class: "form-control" %>
+          </div>
+
+          <div class="input-group">
+            <%= f.text_field :comment, placeholder: "comment", class: "form-control" %>
+          </div>
+
+          <%-# a hidden field containing the found evidence items -%>
+          <%= select_tag 'search_result[evidence_items][]',
+                          options_from_collection_for_select(
+                            @evidence_items,
+                            :id,
+                            :id,
+                            @evidence_items.map(&:id)
+                          ),
+                          {:multiple => true, :hidden => :hidden } %>
+
+          <%= f.submit "Save" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-2">
+    <div class="panel panel-default">
+      <div class="panel-heading">share this page</div>
+      <div class="panel-body">
+        <%= social_share_button_tag(
+          "Serler search results for '#{@search_query}'"
+        ) %>
+      </div>
+    </div>
+  </div>
+
 </div>
