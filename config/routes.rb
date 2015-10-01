@@ -1,8 +1,10 @@
 Serler::Application.routes.draw do
   root :to => 'pages#index'
   get 'search' => 'search#index', :as => :evidence_items
+  post 'search' => 'search#index', :as => :search_results
 
-  resources :search_results
+  # todo:
+  # resources :search_results = , :only => […]
   resources :search_url
 
 

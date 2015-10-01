@@ -56,12 +56,12 @@
           <p class="input-group">
             <%= f.text_field :name, placeholder: "name", class: "form-control" %>
           </p>
-          
+
           <p class="input-group">
-            <%= f.text_area :comment, placeholder: "comment", class: "form-control",rows: "3" %>
+            <%= f.text_area :comment, placeholder: "comment", class: "form-control", rows: "3" %>
           </p>
-        <%= f.text_field :address, value: request.original_url,type: "hidden"  %>
-        <%= f.submit "Save",class: "btn btn-primary",name:""%>
+        <%= f.text_field :address, value: request.original_url, type: "hidden"  %>
+        <%= f.submit "Save", class: "btn btn-primary", name:"save_search_query" %>
         <% end %>
       </div>
     </div>
@@ -71,7 +71,15 @@
     <div class="panel panel-default">
       <div class="panel-heading">save results</div>
       <div class="panel-body">
-        <%= form_for @search_result, url: {controller: "search_results", action: "create"} do |f| %>
+        <%= form_for @search_result do |f| %>
+
+          <% if @search_result.errors.any? %>
+            <% @search_result.errors.full_messages.each do |msg| %>
+              <div class="alert alert-danger" role="alert">
+                <%= msg %>
+              </div>
+            <% end %>
+          <% end %>
 
           <p class="input-group">
             <%= f.text_field :name, placeholder: "name", class: "form-control" %>
@@ -91,7 +99,7 @@
                           ),
                           {:multiple => true, :hidden => :hidden } %>
 
-        <%= f.submit "Save",class: "btn btn-primary",name:"" %>
+        <%= f.submit "Save", class: "btn btn-primary", name:"save_search_results" %>
         <% end %>
       </div>
     </div>
