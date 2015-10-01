@@ -1,0 +1,9 @@
+search_results_2:
+  name: my favorite search result
+  comment: a very useful search
+  evidence_items: evidence_item_one, evidence_item_two
+
+search_results_two:
+  name: another remarkable search result
+  comment: useful for testing purposes as well
+  evidence_items: evidence_item_two, evidence_item_three
