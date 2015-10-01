@@ -3,6 +3,6 @@ class EvidenceItem < AbstractUserCreatedModel
   belongs_to :evidence_source
   has_and_belongs_to_many :software_engineering_methods
   has_and_belongs_to_many :software_engineering_methodologies
-  has_and_belongs_to_many :search_results
+  has_and_belongs_to_many :saved_search_results
 
 end

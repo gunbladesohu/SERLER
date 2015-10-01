@@ -1,0 +1,2 @@
+module SavedSearchQueryHelper
+end

@@ -3,22 +3,22 @@ class SearchController < ApplicationController
   def index
     @search = EvidenceItem.ransack(params[:q])
 
-    if params[:save_results]
-      @saved_result = SearchResult.new(params[:saved_result])
-      if @saved_result.save
+    if params[:saved_search_result]
+      @saved_search_result = SavedSearchResult.new(params[:saved_search_result])
+      if @saved_search_result.save
         redirect_to :back
       end
     else
-      @saved_result = SearchResult.new
+      @saved_search_result = SavedSearchResult.new
     end
 
-    if params[:save_query]
-      @saved_query = SearchUrl.new(params[:search_url])
-      if @saved_query.save
+    if params[:saved_search_query]
+      @saved_search_query = SavedSearchQuery.new(params[:saved_search_query])
+      if @saved_search_query.save
         redirect_to :back
       end
     else
-      @saved_query = SearchUrl.new
+      @saved_search_query = SavedSearchQuery.new
     end
 
     @evidence_items = @search.result

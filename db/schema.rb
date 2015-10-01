@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20151001083111) do
+ActiveRecord::Schema.define(:version => 20151001233427) do
 
   create_table "bibtex_tags", :force => true do |t|
     t.string   "name"
@@ -35,9 +35,9 @@ ActiveRecord::Schema.define(:version => 20151001083111) do
     t.integer  "evidence_source_id"
   end
 
-  create_table "evidence_items_search_results", :id => false, :force => true do |t|
+  create_table "evidence_items_saved_search_results", :id => false, :force => true do |t|
     t.integer "evidence_item_id"
-    t.integer "search_result_id"
+    t.integer "saved_search_result_id"
   end
 
   create_table "evidence_items_software_engineering_methodologies", :id => false, :force => true do |t|
@@ -87,17 +87,17 @@ ActiveRecord::Schema.define(:version => 20151001083111) do
     t.datetime "updated_at",         :null => false
   end
 
-  create_table "search_results", :force => true do |t|
+  create_table "saved_search_queries", :force => true do |t|
     t.string   "name"
-    t.string   "comment"
+    t.text     "comment"
+    t.string   "address"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "search_urls", :force => true do |t|
+  create_table "saved_search_results", :force => true do |t|
     t.string   "name"
-    t.text     "comment"
-    t.string   "address"
+    t.string   "comment"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
