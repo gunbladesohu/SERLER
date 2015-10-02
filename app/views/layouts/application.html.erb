@@ -48,9 +48,11 @@
             <li><a href="#">Evidence Sources (dummy)</a></li>
             <li role="separator" class="divider"></li>
             <li>
-              <%= link_to 'Saved search results', saved_search_results_path %>
+              <%= link_to 'Saved search results', url_for(:controller => 'saved_search_results', :action => 'index') %>
             </li>
-            <li><a href="#">Saved search queries</a></li>
+            <li>
+              <%= link_to 'Saved search queries', url_for(:controller => 'saved_search_queries', :action => 'index') %>
+            </li>
           </ul>
         </li>
 

@@ -1,7 +1,13 @@
 class SearchController < ApplicationController
 
   def index
-    @search = EvidenceItem.ransack(params[:q])
+    @search_query = params[:q]
+    @search = EvidenceItem.ransack(@search_query)
+
+    unless params.count > 2
+      render 'search_form'
+      return
+    end
 
     if params[:saved_search_result]
       @saved_search_result = SavedSearchResult.new(params[:saved_search_result])
@@ -22,6 +28,7 @@ class SearchController < ApplicationController
     end
 
     @evidence_items = @search.result
-  end
+    render 'results'
 
+  end
 end

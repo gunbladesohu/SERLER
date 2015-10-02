@@ -1,5 +1,5 @@
 class SavedSearchQueriesController < ApplicationController
   def index
-    @search_url = SavedSearchQuery.all
+    @saved_search_queries = SavedSearchQuery.all
   end
 end

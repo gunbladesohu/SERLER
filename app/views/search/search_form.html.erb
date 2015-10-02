@@ -1,0 +1,6 @@
+<%= search_form_for @search,
+      url: url_for(:controller => :search, :action => :index) do |f| %>
+  <%= f.label :benefit_cont, "Search for:" %>
+  <%= f.search_field :benefit_cont %>
+  <%= f.submit "Search", name:"" %>
+<% end %>
