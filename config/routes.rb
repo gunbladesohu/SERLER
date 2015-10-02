@@ -1,13 +1,11 @@
 Serler::Application.routes.draw do
   root :to => 'pages#index'
+
   get 'search' => 'search#index', :as => :evidence_items
-  post 'search' => 'search#index', :as => :saved_search_results
-  post 'search' => 'search#index', :as => :saved_search_queries
+  #~ post 'search' => 'search#index', :as => :saved_search_queries
 
-  # todo:
-  # resources :search_results = , :only => […]
-  resources :search_url
-
+  resources :saved_search_results, :only => [:index, :destroy]
+  resources :saved_search_queries, :only => [:index, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

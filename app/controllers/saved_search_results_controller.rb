@@ -1,3 +1,5 @@
 class SavedSearchResultsController < ApplicationController
-  # todo
+  def index
+    @saved_search_results = SavedSearchResult.all
+  end
 end

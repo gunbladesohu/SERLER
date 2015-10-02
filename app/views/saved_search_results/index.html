@@ -1,0 +1,21 @@
+<table class="table" id="search_results">
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>comment</th>
+      <th>evidence items found</th>
+      <th>created</th>
+    </tr>
+  </thead>
+    <% @saved_search_results.each do |r| %>
+      <tr class='clickable-row'
+        data-href='TODO'>
+        <td><%= r.name %></td>
+        <td><%= r.comment %></td>
+        <td>
+          <%= r.evidence_items.count %>
+        </td>
+        <td><%= r.created_at %></td>
+      </tr>
+    <% end %>
+</table>
