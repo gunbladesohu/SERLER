@@ -3,7 +3,7 @@ When(/^I fill in "(.+)" with "(.+)"$/) do |element, text|
 end
 
 When(/^I click on "(.*?)" button$/) do |search|
-  click_on(search)
+  click_button(search)
 end
 
 Then(/^I should see results in a table$/) do

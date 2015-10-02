@@ -70,7 +70,7 @@
             <%= f.text_area :comment, placeholder: "comment", class: "form-control", rows: "3" %>
           </p>
 
-          <%= f.text_field :address, value: request.original_url, type: "hidden"  %>
+          <%= f.text_field :address, value: @search_query, type: "hidden"  %>
 
           <%= f.submit "Save", class: "btn btn-primary", name:"save_search_query" %>
         <% end %>
@@ -121,7 +121,7 @@
       <div class="panel-heading">share this page</div>
       <div class="panel-body">
         <%= social_share_button_tag(
-          "Serler search results for '#{@search_query}'"
+          "Serler search results"
         ) %>
       </div>
     </div>

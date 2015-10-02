@@ -5,7 +5,7 @@ Feature: Manage Shares
 
   Background:
     Given I'm logged in as user
-    And I am on the index page
+    And I am on the search page
     When I fill in "Search for:" with "saasbook"
     And I click on "Search" button
 
