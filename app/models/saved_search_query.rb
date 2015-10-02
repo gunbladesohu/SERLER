@@ -1,4 +1,4 @@
 class SavedSearchQuery < ActiveRecord::Base
-  attr_accessible :address, :comment, :name
+  attr_accessible :search_params, :comment, :name
   validates :name, presence: true
 end

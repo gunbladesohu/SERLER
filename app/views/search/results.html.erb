@@ -70,7 +70,7 @@
             <%= f.text_area :comment, placeholder: "comment", class: "form-control", rows: "3" %>
           </p>
 
-          <%= f.text_field :address, value: @search_query, type: "hidden"  %>
+          <%= f.text_field :search_params, value: @search_params.to_json, type: "hidden"  %>
 
           <%= f.submit "Save", class: "btn btn-primary", name:"save_search_query" %>
         <% end %>

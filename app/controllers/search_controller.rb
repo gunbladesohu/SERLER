@@ -1,8 +1,8 @@
 class SearchController < ApplicationController
 
   def index
-    @search_query = params[:q]
-    @search = EvidenceItem.ransack(@search_query)
+    @search_params = params[:q]
+    @search = EvidenceItem.ransack(@search_params)
 
     unless params.count > 2
       render 'search_form'
@@ -13,6 +13,7 @@ class SearchController < ApplicationController
       @saved_search_result = SavedSearchResult.new(params[:saved_search_result])
       if @saved_search_result.save
         redirect_to :back
+        return
       end
     else
       @saved_search_result = SavedSearchResult.new
@@ -22,6 +23,7 @@ class SearchController < ApplicationController
       @saved_search_query = SavedSearchQuery.new(params[:saved_search_query])
       if @saved_search_query.save
         redirect_to :back
+        return
       end
     else
       @saved_search_query = SavedSearchQuery.new
@@ -29,6 +31,6 @@ class SearchController < ApplicationController
 
     @evidence_items = @search.result
     render 'results'
-
+    return
   end
 end

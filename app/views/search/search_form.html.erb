@@ -1,3 +1,7 @@
+<div class="page-header">
+  <h2>Search</h2>
+</div>
+
 <%= search_form_for @search,
       url: url_for(:controller => :search, :action => :index) do |f| %>
   <%= f.label :benefit_cont, "Search for:" %>

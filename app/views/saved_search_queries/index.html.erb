@@ -1,22 +1,26 @@
+<div class="page-header">
+  <h2>Saved search queries</h2>
+</div>
+
 <table class="table" id="search_results">
   <thead>
     <tr>
       <th>name</th>
       <th>comment</th>
 
-      <%# TODO: make this a human readable parameter list %>
-      <th>URL</th>
+      <%# TODO: make this a human readable %>
+      <th>parameters</th>
 
       <th>created</th>
     </tr>
   </thead>
     <% @saved_search_queries.each do |q| %>
       <tr class='clickable-row'
-        data-href='<%= q.address %>'>
+        data-href='<%= url_for :controller => :search, :action => :index, :q => JSON.parse(q.search_params) %>'>
         <td><%= q.name %></td>
         <td><%= q.comment %></td>
         <td>
-          <%= q.address %>
+          <%= q.search_params %>
         </td>
         <td><%= q.created_at %></td>
       </tr>
