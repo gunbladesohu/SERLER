@@ -8,7 +8,9 @@ Background:
     And I am on the search page
     When I fill in "Search for:" with "saasbook"
     And I click on "Search" button
+    And I fill out save result form, name with "test" and comment with "software enginerring"
+    
 
-Scenario: Save
-	Given I click on "Save Result" button
-	Then I should be able to save search results
+Scenario: Result
+	Given I click on "Save Result" button under the title "save search results"
+	Then I should be able to save search result
