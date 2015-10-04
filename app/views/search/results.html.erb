@@ -72,7 +72,7 @@
 
           <%= f.text_field :search_params, value: @search_params.to_json, type: "hidden"  %>
 
-          <%= f.submit "Save", class: "btn btn-primary", name:"save_search_query" %>
+          <%= f.submit "Save Query", class: "btn btn-primary", name:"save_search_query" %>
         <% end %>
       </div>
     </div>
@@ -110,7 +110,7 @@
                           ),
                           {:multiple => true, :hidden => :hidden } %>
 
-        <%= f.submit "Save", class: "btn btn-primary", name:"save_search_results" %>
+        <%= f.submit "Save Result", class: "btn btn-primary", name:"save_search_results" %>
         <% end %>
       </div>
     </div>
