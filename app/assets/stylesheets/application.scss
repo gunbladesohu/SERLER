@@ -22,16 +22,7 @@ p.input-group {
   width: 100%;
 }
 
-tr.clickable-row * {
-  cursor: pointer;
-}
-
 a.clickable-cell {
-  text-decoration: none;
-
-  /* TODO: remove hardcoding */
-  color: black;
-
   display: block;
   width: 100%;
   height: 100%;
