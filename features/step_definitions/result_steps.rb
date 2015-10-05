@@ -5,5 +5,3 @@ end
 Then(/^I should see results resorted$/) do
   puts :TODO
 end
-
-
