@@ -15,3 +15,7 @@ Background:
 Scenario: Query
   Given I click on "Save Query" button under the title "save search query"
   Then I should be able to save search query
+
+Scenario: View Queries
+  Given I visit saved search queries page
+  Then I should be able to view my "Saved search queries"

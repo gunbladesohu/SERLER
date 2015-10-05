@@ -14,3 +14,7 @@ Background:
 Scenario: Result
   Given I click on "Save Result" button under the title "save search results"
   Then I should be able to save search result
+
+Scenario: View Result
+  Given I visit saved search results page
+  Then I should be able to view my "Saved search results"
