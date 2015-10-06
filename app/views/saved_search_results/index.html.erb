@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h2>Saved search queries</h2>
+  <h2>Saved search results</h2>
 </div>
 
 <table class="table" id="search_results">
@@ -7,34 +7,31 @@
     <tr>
       <th>name</th>
       <th>comment</th>
-
-      <%# TODO: make this a human readable %>
-      <th>parameters</th>
-
+      <th>evidence items found</th>
       <th>created</th>
     </tr>
   </thead>
-    <% @saved_search_queries.each do |q| %>
-      <% @url = url_for :controller => :search, :action => :index, :q => JSON.parse(q.search_params) %>
-
-      <tr>
+    <% @saved_search_results.each do |r| %>
+      <tr class='clickable-row'>
+        <%# @url = url_for :controller => :search, :action => :index, :q => JSON.parse('{"TODO": true}') %>
+        <% @url = "TODO" %>
         <td>
           <a class="clickable-cell" href="<%= @url %>">
-            <%= q.name %>
+            <%= r.name %>
           </a>
         </td>
         <td>
           <a class="clickable-cell" href="<%= @url %>">
-            <%= q.comment %>
+            <%= r.comment %>
           </a>
         </td>
         <td>
           <a class="clickable-cell" href="<%= @url %>">
-            <%= q.search_params %>
+            <%= r.evidence_items.count %>
           </a>
         </td>
         <td>
-          <%= q.created_at %>
+          <%= r.created_at %>
         </td>
       </tr>
     <% end %>

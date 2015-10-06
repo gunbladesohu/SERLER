@@ -1,13 +1,17 @@
 Serler::Application.routes.draw do
-  root :to => 'pages#index'
 
   get 'search' => 'search#index'
   post 'search' => 'search#index', :as => :saved_search_queries
   post 'search' => 'search#index', :as => :saved_search_results
-
+  
   resources :saved_search_results, :except => [:new, :create]
   resources :saved_search_queries, :except => [:new, :create]
-  resources :evidence_items
+	resources :evidence_items do
+			# use a post method in case there is to many search item
+		collection { post :search, to: 'search#index' }		
+	end
+		
+  root :to => 'pages#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

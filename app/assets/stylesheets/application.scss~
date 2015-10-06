@@ -26,12 +26,20 @@ p.input-group {
   width: 100%;
 }
 
+<<<<<<< HEAD
 body{
   background-color: $background-color;
 }
 
 .clickable-row * {
   cursor: pointer;
+=======
+a.clickable-cell {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+>>>>>>> develop
 }
 
 tr:hover td {
@@ -62,6 +70,13 @@ margin:auto;
 }
 .search-form{
 font-family:open sans;
+}
+
+.page-header-text{
+text-align:center;
+font-family:open sans;
+font-weight:600;
+font-size:25px;
 }
 
 .search-input-group{

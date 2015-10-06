@@ -1,3 +1,6 @@
+//= require jquery
+//= require jquery_ujs
+
 $ ->
   initialize_datatable()
 
@@ -13,3 +16,4 @@ initialize_datatable = ->
       "visible": false
     } ]
   })
+	
