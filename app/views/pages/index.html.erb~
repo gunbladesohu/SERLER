@@ -1,10 +1,11 @@
-<div class="main-container">
+<div class="page-header">SERLER DASHBOARD</div>
+<div class="main-container-dashboard">
   <h1></h1>
 </div>
-<div class="main-container">
+<div class="main-container-dashboard">
   <h1></h1>
 </div>
-<div class="main-container">
+<div class="main-container-dashboard">
   <h1></h1>
 </div>
 

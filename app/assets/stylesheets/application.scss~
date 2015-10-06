@@ -57,6 +57,7 @@ background-color: $grid-color;
 border: 1px solid $grid-color;
 margin-right: 38px;
 top: 80px;
+position: relative;
 margin:auto;
 }
 .search-form{
