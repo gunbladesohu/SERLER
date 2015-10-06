@@ -18,12 +18,7 @@
 		<%= render "condition_fields", f: c%>
 	<% end %>
 	<p><%= link_to_add_fields "Add Conditions", f, :condition %></p>
-	<div class="field">
-		Sort:
-		<%= f.sort_fields do |s| %>
-			<%= s.sort_select associations: [:evidence_source, :software_engineering_methods, :software_engineering_methodologies] %>
-		<% end %>
-	</div>
+
 	<div class="actions"><%= f.submit "Search" %></div>
 <% end %>
 

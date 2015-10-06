@@ -23,7 +23,6 @@ class SearchController < ApplicationController
     @search_params = params[:q]
 		@search_evidence_item = EvidenceItem.ransack(@search_params)
     @search_evidence_item.build_condition
-		@search_evidence_item.build_sort if @search_evidence_item.sorts.empty?
 
     unless params.count > 2
       render 'search_form'
