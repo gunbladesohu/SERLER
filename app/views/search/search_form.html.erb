@@ -2,6 +2,8 @@
   <h2>Search</h2>
 </div>
 <%= search_form_for @search, url: url_for(:controller => :search, :action => :index),method: :post do |f| %>
+<%# TODO delete this label after we have new test code %>
+<%= f.label "Search for:", :for=>"q_c_0_v_0_value"%>
 	<%= f.condition_fields do |c| %>
 	<%= render "condition_fields", f: c%>
 	<% end %>
