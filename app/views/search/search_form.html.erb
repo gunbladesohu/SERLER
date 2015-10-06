@@ -1,6 +1,5 @@
-<div class="page-header">
-  <h2>Search</h2>
-</div>
+<div class="main-container search-form">
+  <h2 class="search-heading-text">SEARCH</h2>
 <%= search_form_for @search, url: url_for(:controller => :search, :action => :index),method: :post do |f| %>
 	<%= f.condition_fields do |c| %>
 		<%= c.attribute_fields do |a| %>
@@ -20,5 +19,5 @@
 	</div>
 	<div class="actions"><%= f.submit "Search" %></div>
 <% end %>
-
+</div>
 <%= javascript_include_tag "menu" %>
