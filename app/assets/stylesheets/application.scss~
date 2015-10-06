@@ -16,7 +16,7 @@
 @import "bootstrap";
 
 $grid-color : #EDF0F5;
-$text-color : #7cb95c;
+$text-color : #b2cfA3;
 
 // Compass
 @import 'compass';
