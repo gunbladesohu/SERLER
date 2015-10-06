@@ -40,13 +40,15 @@ tr:hover td {
 }
 
 .main-container{
-width: 60%;
-height: 440px;
+width: 30%;
+height: 225px;
 background-color: $grid-color;
 border: 1px solid $grid-color;
-margin: auto;
-top: 40px;
+margin-right: 38px;
+border-radius: 10px;
+top: 80px;
 position: relative;
+float: left;
 }
 
 .search-form{
@@ -54,7 +56,7 @@ font-family:open sans;
 }
 
 .search-input-group{
-padding-left:170px;
+padding-left:66px;
 }
 
 .search-heading-text{
@@ -74,6 +76,9 @@ width:80%;
 
 	.search-input-group{
 		padding:80px;
+	}
+	.search-form{
+		width:100%;
 	}
 	input[type="search"]{
 		width:80%;
