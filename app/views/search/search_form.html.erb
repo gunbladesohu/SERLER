@@ -1,10 +1,12 @@
 <div class="page-header">
   <h2>Search</h2>
 </div>
-
-<%= search_form_for @search,
-      url: url_for(:controller => :search, :action => :index) do |f| %>
-  <%= f.label :benefit_cont, "Search for:" %>
-  <%= f.search_field :benefit_cont %>
-  <%= f.submit "Search", name:"" %>
+<%= search_form_for @search, url: url_for(:controller => :search, :action => :index) do |f| %>
+	  <%= f.condition_fields do |c| %>
+    <%= render "condition_fields", f: c%>
+  <% end %>
+    <p><%= link_to_add_fields "Add Conditions", f, :condition %>
+  <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
+
+<%= javascript_include_tag "menu" %>
