@@ -8,7 +8,3 @@ When(/^I select "(.*?)" from methods$/) do |method|
   #page.select(method, :from => "method")
 end
 
-Then(/^I should see results based on different constraints$/) do
-  pending
-  # assert page.has_content?(/scrum/i)
-end

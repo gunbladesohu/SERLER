@@ -1,5 +1,5 @@
 When (/^I am on the index page$/) do
-  visit root_path
+	visit root_path
 end
 
 When (/^I am on the search page$/) do
@@ -8,13 +8,10 @@ When (/^I am on the search page$/) do
 end
 
 Given(/^I visit saved search results page$/) do
-  visit url_for(:controller => :saved_search_results, :action => :index)
+	visit url_for(:controller => :saved_search_results, :action => :index)
 end
 
 Given(/^I visit saved search queries page$/) do
-  visit url_for(:controller => :saved_search_queries, :action => :index)
+	visit url_for(:controller => :saved_search_queries, :action => :index)
 end
 
-When(/^I click on "(.*?)"$/) do |arg1|
-  click_on arg1
-end
