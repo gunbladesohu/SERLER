@@ -15,7 +15,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$grid-color : #EDF0F5;
+$background-color : #EDF0F5;
+$grid-color : #ffffff;
 $text-color : #7cb95c;
 
 // Compass
@@ -23,6 +24,10 @@ $text-color : #7cb95c;
 
 p.input-group {
   width: 100%;
+}
+
+body{
+  background-color: $background-color;
 }
 
 .clickable-row * {
@@ -48,9 +53,32 @@ position: relative;
 font-family:open sans;
 }
 
+.search-input-group{
+padding-left:170px;
+}
+
 .search-heading-text{
 color: $text-color;
 font-weight: 600;
-padding : 20px;
+padding : 62px;
 text-align:center;	
+}
+
+input[type="search"]
+{
+padding:8px;
+width:80%;
+}
+
+@media screen and (max-width:768px){
+
+	.search-input-group{
+		padding:80px;
+	}
+	.search-form{
+		width:100%;
+	}
+	input[type="search"]{
+		width:80%;
+	}
 }
