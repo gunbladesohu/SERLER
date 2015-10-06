@@ -2,17 +2,23 @@
   <h2>Search</h2>
 </div>
 <%= search_form_for @search, url: url_for(:controller => :search, :action => :index),method: :post do |f| %>
-		<%= f.condition_fields do |c| %>
-		<%= render "condition_fields", f: c%>
+	<%= f.condition_fields do |c| %>
+		<%= c.attribute_fields do |a| %>
+			<%= a.attribute_select associations: [:evidence_source, :software_engineering_methods, :software_engineering_methodologies] %>
 		<% end %>
-		<p><%= link_to_add_fields "Add Conditions", f, :condition %></p>
-		<div class="field">
-				Sort:
-				<%= f.sort_fields do |s| %>
-					<%= s.sort_select associations: [:evidence_source, :software_engineering_methods, :software_engineering_methodologies] %>
-				<% end %>
-		</div>
-		<div class="actions"><%= f.submit "Search" %></div>
+		<%= f.predicate_select %>
+		<%= c.value_fields do |v| %>
+			<%= v.text_field :value %>
+		<% end %>
+	<% end %>
+	<p><%= link_to_add_fields "Add Conditions", f, :condition %></p>
+	<div class="field">
+		Sort:
+		<%= f.sort_fields do |s| %>
+			<%= s.sort_select associations: [:evidence_source, :software_engineering_methods, :software_engineering_methodologies] %>
+		<% end %>
+	</div>
+	<div class="actions"><%= f.submit "Search" %></div>
 <% end %>
 
 <%= javascript_include_tag "menu" %>
