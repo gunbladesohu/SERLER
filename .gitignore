@@ -45,3 +45,5 @@ bower.json
 /solr/default/data
 /solr/pids
 /log/*.log.lck
+
+*~
