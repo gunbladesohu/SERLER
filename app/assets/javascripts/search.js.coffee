@@ -1,11 +1,8 @@
-//= require jquery
-//= require jquery_ujs
-
 $ ->
   initialize_datatable()
 
 initialize_datatable = ->
-  $("#search_results").DataTable({
+  $(".dataTable").DataTable({
     dom: 'Brtipr',
     stateSave: true,
     buttons: [
@@ -16,4 +13,3 @@ initialize_datatable = ->
       "visible": false
     } ]
   })
-	

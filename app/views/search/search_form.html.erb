@@ -1,25 +1,27 @@
+<%= render "includes" %>
+
 <div class="page-header">
   <h2>Search</h2>
 </div>
 <%= search_form_for @search_evidence_item, url: url_for(:controller => :search, :action => :index),method: :post do |f| %>
-	<%# TODO delete this label after we have new test code %>
-	<%= f.label "Search for:", :for=>"q_c_0_v_0_value"%>
-	<p>
-		<%= check_box_tag :methodology %>
-		Methodologies:
-		<%= collection_select(:methodologies,:id, SoftwareEngineeringMethodology.all, :id, :name) %>
-	</p>
-	<p>
-		<%= check_box_tag :method %>
-		Methods:
-		<%= collection_select(:sdm,:id, SoftwareEngineeringMethod.all, :id, :name) %>
-	</p>
-	<%= f.condition_fields do |c| %>
-		<%= render "condition_fields", f: c%>
-	<% end %>
-	<p><%= link_to_add_fields "Add Conditions", f, :condition %></p>
+  <%# TODO delete this label after we have new test code %>
+  <%= f.label "Search for:", :for=>"q_c_0_v_0_value"%>
+  <p>
+    <%= check_box_tag :methodology %>
+    Methodologies:
+    <%= collection_select(:methodologies,:id, SoftwareEngineeringMethodology.all, :id, :name) %>
+  </p>
+  <p>
+    <%= check_box_tag :method %>
+    Methods:
+    <%= collection_select(:sdm,:id, SoftwareEngineeringMethod.all, :id, :name) %>
+  </p>
+  <%= f.condition_fields do |c| %>
+    <%= render "condition_fields", f: c%>
+  <% end %>
+  <p><%= link_to_add_fields "Add Conditions", f, :condition %></p>
 
-	<div class="actions"><%= f.submit "Search" %></div>
+  <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
 
 <%= javascript_include_tag "menu" %>

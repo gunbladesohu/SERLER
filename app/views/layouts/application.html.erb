@@ -2,17 +2,22 @@
 <html>
 <head>
   <title>Serler</title>
+
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" %>
   <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" %>
   <%= stylesheet_link_tag params[:controller], :media => "all" %>
+
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag params[:controller] %>
+
   <%= csrf_meta_tags %>
   <%= yield :head %>
 </head>
 <body>
 
 <nav class="navbar navbar-default">
-	<div class="container-fluid">
+  <div class="container-fluid">
 
     <div class="navbar-header">
       <a class="navbar-brand"
@@ -93,7 +98,5 @@
 <div class="container" role="main">
   <%= yield %>
 </div>
-	<%= javascript_include_tag "application" %>
-	<%= javascript_include_tag params[:controller] %>
 </body>
 </html>
