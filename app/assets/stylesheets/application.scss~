@@ -48,6 +48,7 @@ font-family:open sans;
 
 thead>tr{
 font-weight:400;
+text-transform : uppercase;
 }
 
 tr:hover td {
