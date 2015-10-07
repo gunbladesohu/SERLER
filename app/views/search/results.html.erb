@@ -1,22 +1,10 @@
-<% content_for :head do %>
-
-  <%-# DataTables -%>
-  <%= stylesheet_link_tag "//cdn.datatables.net/1.10.9/css/dataTables.bootstrap.min.css" %>
-  <%= javascript_include_tag "//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js" %>
-  <%= javascript_include_tag "//cdn.datatables.net/1.10.9/js/dataTables.bootstrap.min.js" %>
-
-  <%-# DataTables Buttons column visibility extension -%>
-  <%= stylesheet_link_tag "//cdn.datatables.net/buttons/1.0.3/css/buttons.bootstrap.min.css" %>
-  <%= javascript_include_tag "//cdn.datatables.net/buttons/1.0.3/js/dataTables.buttons.min.js" %>
-  <%= javascript_include_tag "//cdn.datatables.net/buttons/1.0.3/js/buttons.bootstrap.min.js" %>
-  <%= javascript_include_tag "//cdn.datatables.net/buttons/1.0.3/js/buttons.colVis.min.js" %>
-<% end %>
+<%= render "includes" %>
 
 <div class="page-header">
   <h2 class="page-header-text">Search results</h2>
 </div>
 
-<table class="table" id="search_results">
+<table class="table dataTable">
   <thead>
     <tr>
       <th>result</th>
