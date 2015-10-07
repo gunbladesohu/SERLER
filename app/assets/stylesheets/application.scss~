@@ -26,20 +26,29 @@ p.input-group {
   width: 100%;
 }
 
-<<<<<<< HEAD
+
 body{
   background-color: $background-color;
 }
 
 .clickable-row * {
   cursor: pointer;
-=======
+}
 a.clickable-cell {
   display: block;
   width: 100%;
   height: 100%;
   margin: 0;
->>>>>>> develop
+}
+
+table{
+background-color:white;
+font-family:open sans;
+}
+
+thead>tr{
+font-weight:400;
+text-transform : uppercase;
 }
 
 tr:hover td {

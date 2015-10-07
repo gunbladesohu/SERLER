@@ -41,6 +41,17 @@ a.clickable-cell {
   margin: 0;
 }
 
+table{
+background-color:white;
+font-family:open sans;
+}
+
+thead>tr{
+font-weight:400;
+text-transform : uppercase;
+color: $text-color;
+}
+
 tr:hover td {
   // TODO: replace hard-coded value
   background-color: #F5FFF5;

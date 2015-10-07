@@ -1,18 +1,6 @@
 <<<<<<< HEAD
 <div class="main-container search-form">
-  <h2 class="search-heading-text">SERLER SIMPLIFYING YOUR RESEARCH</h2>
-<%= search_form_for @search,
-      url: url_for(:controller => :search, :action => :index) do |f| %>
-  <div class="search-input-group">
-	<%= f.search_field :benefit_cont %>
-  	<%= f.submit "Search", name:"" %>
-  </div>
-<% end %>
-</div>
-=======
-<div class="page-header">
-  <h2>Search</h2>
-</div>
+  <h2 class="search-heading-text">SEARCH</h2>
 <%= search_form_for @search, url: url_for(:controller => :search, :action => :index),method: :post do |f| %>
 	<%= f.condition_fields do |c| %>
 		<%= c.attribute_fields do |a| %>
@@ -31,7 +19,32 @@
 		<% end %>
 	</div>
 	<div class="actions"><%= f.submit "Search" %></div>
-<% end %>
+=======
+<%= render "includes" %>
 
-<%= javascript_include_tag "menu" %>
+<div class="page-header">
+  <h2>Search</h2>
+</div>
+<%= search_form_for @search_evidence_item, url: url_for(:controller => :search, :action => :index),method: :post do |f| %>
+  <%# TODO delete this label after we have new test code %>
+  <%= f.label "Search for:", :for=>"q_c_0_v_0_value"%>
+  <p>
+    <%= check_box_tag :methodology %>
+    Methodologies:
+    <%= collection_select(:methodologies,:id, SoftwareEngineeringMethodology.all, :id, :name) %>
+  </p>
+  <p>
+    <%= check_box_tag :method %>
+    Methods:
+    <%= collection_select(:sdm,:id, SoftwareEngineeringMethod.all, :id, :name) %>
+  </p>
+  <%= f.condition_fields do |c| %>
+    <%= render "condition_fields", f: c%>
+  <% end %>
+  <p><%= link_to_add_fields "Add Conditions", f, :condition %></p>
+
+  <div class="actions"><%= f.submit "Search" %></div>
 >>>>>>> develop
+<% end %>
+</div>
+<%= javascript_include_tag "menu" %>
