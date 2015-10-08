@@ -7,9 +7,9 @@ Background:
 	Given I'm logged in as user
 	And I am on the search page
 	When I fill in "Search for:" with "saasbook"
-	And I select "Scrum" from methodolgy
-	And I select "daily stand up meeting" from methods
+	And I select "SCRUM" from Methodologies 
+	And I select "test driven development" from Methods 
 	And I click on "Search" button
 
 Scenario: View
-    Then I should see results based on different constraints
+    Then I should see name description of evidence item related "scrum" and "test driven development" in methods
