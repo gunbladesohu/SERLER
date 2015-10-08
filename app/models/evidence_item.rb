@@ -7,6 +7,12 @@ class EvidenceItem < AbstractUserCreatedModel
 
   RANSACKABLE_ATTRIBUTES = ["benefit", "result", "id"]
 
+  # TODO/hack:
+  # we must allow the id field to be searchable/ransackable in order
+  #   to search for it in URLs (e.g. to re-call a saved search result)
+  # BUT we cannot tell the form helper to not display this field,
+  #   so we hide it after displaying it…
+  # see also search.js.coffee
   def self.ransackable_attributes auth_object = nil
     (RANSACKABLE_ATTRIBUTES) + _ransackers.keys
   end

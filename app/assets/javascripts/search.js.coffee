@@ -28,6 +28,14 @@ initialize_search_form = ->
     "selected", true
   );
 
+  # TODO/hack:
+  # we must allow the id field to be searchable/ransackable in order
+  #   to search for it in URLs (e.g. to re-call a saved search result)
+  # BUT we cannot tell the form helper to not display this field,
+  #   so we hide it after displaying it…
+  # see also app/models/evidence_item.rb
+  $("form[id$='_search'] optgroup option[value='id']").remove()
+
   $('form').on 'click', '.remove_fields', (event) ->
     $(this).closest('.field').remove()
     event.preventDefault()
