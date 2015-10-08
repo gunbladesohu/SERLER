@@ -28,6 +28,10 @@ initialize_search_form = ->
     "selected", true
   );
 
+  $("#q_c_0_a_0_name").children('option[value="software_engineering_methodologies_name"]').hide();
+
+  $("#q_c_1_a_0_name").children('option[value="software_engineering_methods_name"]').hide();
+
   # TODO/hack:
   # we must allow the id field to be searchable/ransackable in order
   #   to search for it in URLs (e.g. to re-call a saved search result)
