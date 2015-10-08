@@ -11,27 +11,26 @@
       <th>created</th>
     </tr>
   </thead>
-    <% @saved_search_results.each do |r| %>
+    <% @saved_search_results_and_query_params.each do |saved_result, query_params| %>
       <tr class='clickable-row'>
-        <%# @url = url_for :controller => :search, :action => :index, :q => JSON.parse('{"TODO": true}') %>
-        <% @url = "TODO" %>
+        <% @url = url_for :controller => :search, :action => :index, :q => query_params %>
         <td>
           <a class="clickable-cell" href="<%= @url %>">
-            <%= r.name %>
+            <%= saved_result.name %>
           </a>
         </td>
         <td>
           <a class="clickable-cell" href="<%= @url %>">
-            <%= r.comment %>
+            <%= saved_result.comment %>
           </a>
         </td>
         <td>
           <a class="clickable-cell" href="<%= @url %>">
-            <%= r.evidence_items.count %>
+            <%= saved_result.evidence_items.count %>
           </a>
         </td>
         <td>
-          <%= r.created_at %>
+          <%= saved_result.created_at %>
         </td>
       </tr>
     <% end %>
