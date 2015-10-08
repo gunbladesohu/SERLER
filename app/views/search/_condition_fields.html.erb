@@ -6,6 +6,7 @@
       :software_engineering_methodologies
     ] %>
   <% end %>
+  <%= f.predicate_select %>
   <%= f.value_fields do |v| %>
       <%= v.text_field :value %>
   <% end %>

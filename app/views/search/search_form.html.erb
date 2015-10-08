@@ -9,6 +9,7 @@
   <%# TODO delete this label after we have new test code %>
   <%= f.label "Search for:", :for=>"q_c_2_v_0_value"%>
   <p>Note: please leave content blank if you want to browse everything in that category.</p>
+
   <p>
     Methodologies:
     <%= f.condition_fields do |builder| %>
@@ -17,9 +18,9 @@
       <% end %>
       <%= builder.predicate_select %>
       <%= builder.value_fields do |v| %>
-      <%= v.select :value, SoftwareEngineeringMethodology.all.collect{|p| p.name}, include_blank:true %>
+        <%= v.select :value, SoftwareEngineeringMethodology.all.collect{|p| p.name}, include_blank:true %>
+      <% end %>
     <% end %>
-  <% end %>
   </p>
 
   <p>
@@ -32,11 +33,11 @@
       <%= builder.value_fields do |v| %>
         <%= v.select :value, SoftwareEngineeringMethod.all.collect{|p| p.name}, include_blank:true %>
       <% end %>
-  <% end %>
+    <% end %>
   </p>
 
   <%= f.condition_fields do |c| %>
-    <%= render "condition_fields", f: c%>
+    <%= render "condition_fields", f: c %>
   <% end %>
 
   <p><%= link_to_add_fields "Add Conditions", f, :condition %></p>
@@ -44,5 +45,3 @@
   <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
 </div>
-<%= javascript_include_tag "select_menu" %>
-<%= javascript_include_tag "menu" %>
