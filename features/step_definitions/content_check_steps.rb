@@ -19,7 +19,7 @@ Then(/^I should not see "(.*?)"$/) do |arg1|
 end
 
 Then(/^I should see results in a table$/) do
-  assert page.assert_selector('table#search_results')
+  assert page.assert_selector('table.dataTable')
 end
 
 Then(/^I should see results based on different constraints$/) do
