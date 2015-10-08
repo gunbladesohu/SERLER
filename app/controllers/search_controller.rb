@@ -1,24 +1,5 @@
 class SearchController < ApplicationController
-  
-  
-  def advanced_search
-    @search_params = params[:q]
-    @search = EvidenceItem.search(@search_params)
     
-    @res=@search.result
-    
-    unless params.count > 2
-      render 'advanced_search'
-      return
-    end
-    
-    @evidence_items = @search.result
-    render 'results'
-    return
-    
-  end
-  
-  
   def index
     @search_params = params[:q]
 		@search_evidence_item = EvidenceItem.ransack(@search_params)

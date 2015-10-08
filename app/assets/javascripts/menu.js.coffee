@@ -1,4 +1,3 @@
-//= require jquery
 
 jQuery ->
   $('form').on 'click', '.remove_fields', (event) ->
@@ -10,5 +9,7 @@ jQuery ->
     regexp = new RegExp($(this).data('id'), 'g')
     $(this).before($(this).data('fields').replace(regexp, time))
     event.preventDefault()
-	
+
 	$('.remove_fields').hide()
+
+    
