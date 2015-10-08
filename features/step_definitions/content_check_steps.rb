@@ -19,7 +19,6 @@ Then(/^I should not see "(.*?)"$/) do |arg1|
 end
 
 Then(/^I should see results in a table$/) do
-<<<<<<< HEAD
 	assert page.assert_selector('table')
 end
 
@@ -35,12 +34,9 @@ Then(/^I should see name description of evidence item related "(.*?)" and "(.*?)
 	# end
 	#assert has_value_and_name
 	expect(page).to have_text arg1 and arg2
-=======
-  assert page.assert_selector('table.dataTable')
 end
 
 Then(/^I should see results based on different constraints$/) do
   pending
   # assert page.has_content?(/scrum/i)
->>>>>>> a55b2d1bd725f4b063aec619635a27b2c4ec72a3
 end
