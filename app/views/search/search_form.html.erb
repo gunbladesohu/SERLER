@@ -11,29 +11,29 @@
   <p>Note: please leave content blank if you want to browse everything in that category.</p>
 
   <p>
-      Methodologies:
-      <%= f.condition_fields do |builder| %>
-        <%= builder.attribute_fields do |a| %>
-          <%= a.attribute_select associations: [:software_engineering_methodologies]  %>
-        <% end %>
-        <%= builder.predicate_select %>
-        <%= builder.value_fields do |v| %>
+    Methodologies:
+    <%= f.condition_fields do |builder| %>
+      <%= builder.attribute_fields do |a| %>
+        <%= a.attribute_select associations: [:software_engineering_methodologies]  %>
+      <% end %>
+      <%= builder.predicate_select %>
+      <%= builder.value_fields do |v| %>
         <%= v.select :value, SoftwareEngineeringMethodology.all.collect{|p| p.name}, include_blank:true %>
       <% end %>
-  <% end %>
+    <% end %>
   </p>
 
   <p>
     Methods:
-      <%= f.condition_fields do |builder| %>
-        <%= builder.attribute_fields do |a| %>
-          <%= a.attribute_select associations: [:software_engineering_methods]  %>
-        <% end %>
-        <%= builder.predicate_select %>
-        <%= builder.value_fields do |v| %>
-          <%= v.select :value, SoftwareEngineeringMethod.all.collect{|p| p.name}, include_blank:true %>
-        <% end %>
-  <% end %>
+    <%= f.condition_fields do |builder| %>
+      <%= builder.attribute_fields do |a| %>
+        <%= a.attribute_select associations: [:software_engineering_methods]  %>
+      <% end %>
+      <%= builder.predicate_select %>
+      <%= builder.value_fields do |v| %>
+        <%= v.select :value, SoftwareEngineeringMethod.all.collect{|p| p.name}, include_blank:true %>
+      <% end %>
+    <% end %>
   </p>
 
   <%= f.condition_fields do |c| %>
