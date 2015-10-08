@@ -18,12 +18,12 @@ initialize_datatable = ->
 initialize_search_form = ->
 
   $(
-    "#q_c_0_a_0_name option[value='software_engineering_methodologies_name']"
+    "option[value='software_engineering_methodologies_name']:hidden"
   ).attr(
     "selected", true
   );
   $(
-    "#q_c_1_a_0_name option[value='software_engineering_methods_name']"
+    "option[value='software_engineering_methods_name']:hidden"
   ).attr(
     "selected", true
   );

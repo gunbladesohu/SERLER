@@ -1,9 +1,11 @@
 <div class="field">
   <%= f.attribute_fields do |a| %>
     <%= a.attribute_select associations: [
-      :evidence_source,
       :software_engineering_methods,
-      :software_engineering_methodologies
+      :software_engineering_methodologies,
+      :evidence_source,
+      :evidence_source_bibtex_tags,
+      :evidence_source_bibtex_type
     ] %>
   <% end %>
   <%= f.predicate_select %>
