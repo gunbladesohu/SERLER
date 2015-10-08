@@ -1,8 +1,8 @@
 class SearchController < ApplicationController
-    
+
   def index
     @search_params = params[:q]
-		@search_evidence_item = EvidenceItem.ransack(@search_params)
+    @search_evidence_item = EvidenceItem.ransack(@search_params)
     @search_evidence_item.build_condition
 
     unless params.count > 2
@@ -30,10 +30,9 @@ class SearchController < ApplicationController
       @saved_search_query = SavedSearchQuery.new
     end
 
-    @evidence_items = @search_evidence_item.result
+    @evidence_items = @search_evidence_item.result(distinct: true)
     render 'results'
     return
   end
-  
 
 end

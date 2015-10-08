@@ -5,7 +5,7 @@
 </div>
 
 <%= search_form_for @search_evidence_item, url: url_for(:controller => :search, :action => :index), method: :post do |f| %>
-  
+
   <%# TODO delete this label after we have new test code %>
   <%= f.label "Search for:", :for=>"q_c_2_v_0_value"%>
   <p>Note: please leave content blank if you want to browse everything in that category.</p>
@@ -37,7 +37,7 @@
   </p>
 
   <%= f.condition_fields do |c| %>
-    <%= render "condition_fields", f: c%>
+    <%= render "condition_fields", f: c %>
   <% end %>
 
   <p><%= link_to_add_fields "Add Conditions", f, :condition %></p>
@@ -45,5 +45,3 @@
   <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
 </div>
-<%= javascript_include_tag "select_menu" %>
-<%= javascript_include_tag "menu" %>
