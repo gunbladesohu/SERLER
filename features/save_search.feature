@@ -6,7 +6,7 @@ Feature: Save Search
 Background:
   Given I'm logged in as user
   And I am on the search page
-  When I fill in "Search for:" with "three"
+  When I fill in "q_c_2_v_0_value" with "three"
   And I click on "Search" button
   Then I should see "evidence item three"
   And I should not see "evidence item one"

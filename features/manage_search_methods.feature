@@ -6,7 +6,7 @@ Feature: Methods
 Background:
 	Given I'm logged in as user
 	And I am on the search page
-	When I fill in "Search for:" with "saasbook"
+	When I fill in "q_c_2_v_0_value" with "saasbook"
 	And I select "SCRUM" from Methodologies 
 	And I select "test driven development" from Methods 
 	And I click on "Search" button
