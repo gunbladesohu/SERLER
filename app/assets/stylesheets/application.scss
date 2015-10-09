@@ -97,7 +97,7 @@ padding-left:66px;
 color: $text-color;
 font-weight: 600;
 padding : 62px;
-text-align:center;	
+text-align:center;
 }
 
 input[type="search"]
@@ -108,13 +108,19 @@ width:80%;
 
 @media screen and (max-width:768px){
 
-	.search-input-group{
-		padding:80px;
-	}
-	.search-form{
-		width:100%;
-	}
-	input[type="search"]{
-		width:80%;
-	}
+        .search-input-group{
+                padding:80px;
+        }
+        .search-form{
+                width:100%;
+        }
+        input[type="search"]{
+                width:80%;
+        }
+}
+
+.navbar-brand img {
+  display: inline;
+  margin: -5% 0 0 5px;
+  height: 150%;
 }
