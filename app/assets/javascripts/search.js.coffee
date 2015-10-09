@@ -23,7 +23,7 @@ initialize_search_form = ->
     "selected", true
   );
   $(
-    "select:hidden option[value='software_engineering_methods_name']:hidden"
+    "select:hidden option[value='software_engineering_methods_name']"
   ).attr(
     "selected", true
   );
