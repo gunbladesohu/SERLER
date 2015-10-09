@@ -29,7 +29,7 @@ Scenario: Save and re-display search queries
   When I fill in "saved_search_query_name" with "query for 3"
   And I fill in "saved_search_query_comment" with "a useful query for 3"
   And I click on "Save Query"
-  # Then I should see "Search query saved"
+  # TODO: Then I should see "Search query saved"
   When I visit saved search queries page
   Then I should see "a useful query for 3"
   # TODO: create another matching item
