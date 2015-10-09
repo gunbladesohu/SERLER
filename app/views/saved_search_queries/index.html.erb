@@ -7,10 +7,6 @@
     <tr>
       <th>name</th>
       <th>comment</th>
-
-      <%# TODO: make this a human readable %>
-      <th>parameters</th>
-
       <th>created</th>
     </tr>
   </thead>
@@ -28,12 +24,6 @@
             <%= q.comment %>
           </a>
         </td>
-        <td>
-          <a class="clickable-cell" href="<%= @url %>">
-            <%= q.search_params %>
-          </a>
-        </td>
-        <td>
           <%= q.created_at %>
         </td>
       </tr>
