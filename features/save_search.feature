@@ -20,7 +20,9 @@ Scenario: Save and re-display search result
   Then I should see "a useful result for 3"
   # TODO: create another matching item
   When I click on "result for 3"
-  Then I should see "a useful result for 3"
+  Then I should not see "evidence item one"
+  And I should see "evidence item two"
+  And I should not see "evidence item three"
   # TODO: I should NOT see the new matching item
 
 Scenario: Save and re-display search queries

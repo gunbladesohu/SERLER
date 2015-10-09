@@ -15,20 +15,5 @@ When(/^I click on "(.*?)" button$/) do |search|
 end
 
 When(/^I click on "(.*?)"$/) do |arg1|
-	
-	@saved_search_result = SavedSearchResult.new(:name => arg1, :comment => arg1)
-	@saved_search_query = SavedSearchQuery.new(:name => arg1, :comment => arg1)
-	if arg1 == "result for 3"
-		if @saved_search_result.save
-			@saved_search_results = SavedSearchResult.all
-			click_on arg1
-		end
-	elsif arg1 == "query for 3"
-		if @saved_search_query.save
-			@saved_search_queries = SavedSearchQuery.all
-			click_on arg1
-		end
-	else
-		click_on arg1
-	end
+  click_on arg1
 end
