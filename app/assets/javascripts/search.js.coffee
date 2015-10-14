@@ -1,6 +1,8 @@
 $ ->
   initialize_datatable()
   initialize_search_form()
+  hide_database_item()
+  select_dropbox_item()
 
 initialize_datatable = ->
   $(".dataTable").DataTable({
@@ -16,7 +18,6 @@ initialize_datatable = ->
   })
 
 initialize_search_form = ->
-
   $(
     "select:hidden option[value='software_engineering_methodologies_name']"
   ).attr(
@@ -27,6 +28,19 @@ initialize_search_form = ->
   ).attr(
     "selected", true
   );
+  $(".remove_fields").hide();
+
+
+  # 0.5 As a registered user, 
+  # I do not want to search for or see when a set of data 
+  # was added to or modified in the database, 
+  # so that the user interfaces does not contain irrelevant data.
+hide_database_item = ->
+  $("form[id$='_search'] optgroup option[value='id']").remove()
+  
+  $("option[value$='_at']").hide()
+
+
 
   # TODO/hack:
   # we must allow the id field to be searchable/ransackable in order
@@ -34,7 +48,7 @@ initialize_search_form = ->
   # BUT we cannot tell the form helper to not display this field,
   #   so we hide it after displaying it…
   # see also app/models/evidence_item.rb
-  $("form[id$='_search'] optgroup option[value='id']").remove()
+select_dropbox_item = ->
 
   $('form').on 'click', '.remove_fields', (event) ->
     $(this).closest('.field').remove()
@@ -44,4 +58,5 @@ initialize_search_form = ->
     time = new Date().getTime()
     regexp = new RegExp($(this).data('id'), 'g')
     $(this).before($(this).data('fields').replace(regexp, time))
+    hide_database_item()
     event.preventDefault()
