@@ -3,6 +3,8 @@ $ ->
   initialize_search_form()
   modify_search_field()
   select_dropbox_item()
+  return
+
 
 initialize_datatable = ->
   $(".dataTable").DataTable({
@@ -16,6 +18,8 @@ initialize_datatable = ->
       "visible": false
     } ]
   })
+  return
+
 
 initialize_search_form = ->
   $(
@@ -29,6 +33,7 @@ initialize_search_form = ->
     "selected", true
   );
   $(".remove_fields").hide();
+  return
 
 
 
@@ -45,7 +50,9 @@ modify_search_field = ->
   $("[id$='_p'] option[value*='in']").hide()
   $("[id$='_p'] option[value*='true']").hide()
   $("[id$='_p'] option[value*='false']").hide()
-  $("[id$='_p'] option[value*='null']").hide()
+  $("[id$='_p'] option[value*='null']").hide();
+  return
+
 
   # TODO/hack:
   # we must allow the id field to be searchable/ransackable in order
@@ -59,9 +66,14 @@ select_dropbox_item = ->
     $(this).closest('.field').remove()
     event.preventDefault()
 
+
   $('form').on 'click', '.add_fields', (event) ->
     time = new Date().getTime()
     regexp = new RegExp($(this).data('id'), 'g')
     $(this).before($(this).data('fields').replace(regexp, time))
     modify_search_field()
     event.preventDefault()
+  
+  return
+
+  
