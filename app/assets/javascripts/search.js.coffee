@@ -1,7 +1,7 @@
 $ ->
   initialize_datatable()
   initialize_search_form()
-  hide_database_item()
+  modify_search_field()
   select_dropbox_item()
 
 initialize_datatable = ->
@@ -31,16 +31,21 @@ initialize_search_form = ->
   $(".remove_fields").hide();
 
 
-  # 0.5 As a registered user, 
-  # I do not want to search for or see when a set of data 
-  # was added to or modified in the database, 
-  # so that the user interfaces does not contain irrelevant data.
-hide_database_item = ->
+
+modify_search_field = ->
   $("form[id$='_search'] optgroup option[value='id']").remove()
-  
-  $("option[value$='_at']").hide()
+    
+  # hide database related item
+  $("[id$='_name'] option[value$='_at']").hide()
 
-
+  # hide unecessary calculator
+  $("[id$='_p'] option[value*='match']").hide()
+  $("[id$='_p'] option[value*='lt']").hide()
+  $("[id$='_p'] option[value*='gt']").hide()
+  $("[id$='_p'] option[value*='in']").hide()
+  $("[id$='_p'] option[value*='true']").hide()
+  $("[id$='_p'] option[value*='false']").hide()
+  $("[id$='_p'] option[value*='null']").hide()
 
   # TODO/hack:
   # we must allow the id field to be searchable/ransackable in order
@@ -58,5 +63,5 @@ select_dropbox_item = ->
     time = new Date().getTime()
     regexp = new RegExp($(this).data('id'), 'g')
     $(this).before($(this).data('fields').replace(regexp, time))
-    hide_database_item()
+    modify_search_field()
     event.preventDefault()
