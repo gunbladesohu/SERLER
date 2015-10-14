@@ -8,10 +8,10 @@
 
   <%# TODO delete this label after we have new test code %>
   <%# f.label "Search for:", :for=>"q_c_2_v_0_value"%>
-  <p>Note: please leave content blank if you want to browse everything in that category.</p>
   <div class="panel panel-success">
-    <div class="panel panel-heading">Browsing</div>
+    <div class="panel panel-heading">Note: please leave content blank if you want to browse everything in that category.</div>
     <div class="panel-body">
+      <p>Browse - please select item(s) to browse</p>
       <p>
         Methodologies:
         <%= f.condition_fields do |builder| %>
@@ -38,6 +38,7 @@
       </p>
     </div>
 <div class="panel-footer">
+  <p>condition search</p>
   <%= f.condition_fields do |c| %>
     <%= render "condition_fields", f: c %>
   <% end %>
