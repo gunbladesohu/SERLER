@@ -5,7 +5,7 @@ class SearchController < ApplicationController
     @search_evidence_item = EvidenceItem.ransack(@search_params)
     @search_evidence_item.build_condition
 
-    unless params.count > 2
+    if params.count < 3
       render 'search_form'
       return
     end
