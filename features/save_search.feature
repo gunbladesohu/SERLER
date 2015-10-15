@@ -15,7 +15,7 @@ Scenario: Save and re-display search result
   When I fill in "saved_search_result_name" with "result for 3"
   And I fill in "saved_search_result_comment" with "a useful result for 3"
   And I click on "Save Result"
-  # Then I should see "Search result saved"
+  Then I should see "result saved"
   When I visit saved search results page
   Then I should see "a useful result for 3"
   # TODO: create another matching item
@@ -29,7 +29,7 @@ Scenario: Save and re-display search queries
   When I fill in "saved_search_query_name" with "query for 3"
   And I fill in "saved_search_query_comment" with "a useful query for 3"
   And I click on "Save Query"
-  # TODO: Then I should see "Search query saved"
+  Then I should see "query saved"
   When I visit saved search queries page
   Then I should see "a useful query for 3"
   # TODO: create another matching item
