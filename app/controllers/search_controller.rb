@@ -16,7 +16,7 @@ class SearchController < ApplicationController
       :software_engineering_methodologies,
       :evidence_source,
       :evidence_source_bibtex_tags,
-      :evidence_source_bibtex_type
+      :evidence_source_bibtex_type,
     ]
     @search_params = params[:q]
     @search_evidence_item = EvidenceItem.ransack(@search_params)
@@ -30,6 +30,7 @@ class SearchController < ApplicationController
     if params[:saved_search_result]
       @saved_search_result = SavedSearchResult.new(params[:saved_search_result])
       if @saved_search_result.save
+        flash[:success] = "Search result saved as '#{@saved_search_result.name}'."
         redirect_to :back
         return
       end
@@ -40,6 +41,7 @@ class SearchController < ApplicationController
     if params[:saved_search_query]
       @saved_search_query = SavedSearchQuery.new(params[:saved_search_query])
       if @saved_search_query.save
+        flash[:success] = "Search query saved as '#{@saved_search_query.name}'."
         redirect_to :back
         return
       end

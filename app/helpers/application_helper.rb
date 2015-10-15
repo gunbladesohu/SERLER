@@ -9,3 +9,14 @@ module ApplicationHelper
               data: {id: id, fields: fields.gsub("\n", "")})
   end
 end
+
+def bootstrap_flash_class(level)
+  # returns bootstrap CSS class for flash level accordingly
+  #   inspired by https://coderwall.com/p/jzofog
+  case level
+    when :notice then "alert alert-info"
+    when :success then "alert alert-success"
+    when :error then "alert alert-error"
+    when :alert then "alert alert-error"
+  end
+end
