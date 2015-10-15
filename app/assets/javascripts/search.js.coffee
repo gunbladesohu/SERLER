@@ -1,7 +1,7 @@
 $ ->
   initialize_datatable()
   initialize_search_form()
-  modify_search_field()
+  remove_id_field()
   select_dropbox_item()
   return
 
@@ -37,26 +37,15 @@ initialize_search_form = ->
 
 
 
-modify_search_field = ->
-  $("form[id$='_search'] optgroup option[value='id']").remove()
-
-  # hide unecessary calculator
-  $("[id$='_p'] option[value*='match']").hide()
-  $("[id$='_p'] option[value*='lt']").hide()
-  $("[id$='_p'] option[value*='gt']").hide()
-  $("[id$='_p'] option[value*='in']").hide()
-  $("[id$='_p'] option[value*='true']").hide()
-  $("[id$='_p'] option[value*='false']").hide()
-  $("[id$='_p'] option[value*='null']").hide();
-  return
-
-
+remove_id_field = ->
   # TODO/hack:
   # we must allow the id field to be searchable/ransackable in order
   #   to search for it in URLs (e.g. to re-call a saved search result)
   # BUT we cannot tell the form helper to not display this field,
   #   so we hide it after displaying it…
   # see also app/models/evidence_item.rb
+  $("form[id$='_search'] optgroup option[value='id']").remove()
+
 select_dropbox_item = ->
 
   $('form').on 'click', '.remove_fields', (event) ->

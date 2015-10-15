@@ -1,6 +1,23 @@
 class SearchController < ApplicationController
 
   def index
+    @SEARCH_PREDICATES = [
+      :eq,
+      :not_eq,
+      :cont,
+      :not_cont,
+      :start,
+      :not_start,
+      :end,
+      :not_end,
+    ]
+    @SEARCH_ASSOCIATIONS = [
+      :software_engineering_methods,
+      :software_engineering_methodologies,
+      :evidence_source,
+      :evidence_source_bibtex_tags,
+      :evidence_source_bibtex_type
+    ]
     @search_params = params[:q]
     @search_evidence_item = EvidenceItem.ransack(@search_params)
     @search_evidence_item.build_condition
