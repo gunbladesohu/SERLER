@@ -11,8 +11,7 @@ class EvidenceItem < AbstractUserCreatedModel
   # BUT we cannot tell the form helper to not display this field,
   #   so we hide it after displaying it…
   # see also search.js.coffee
-
-  NON_RANSACKABLE_ATTRIBUTES = []
+  NON_RANSACKABLE_ATTRIBUTES = ['created_at', 'updated_at']
 
   def self.ransackable_attributes auth_object = nil
     (column_names - NON_RANSACKABLE_ATTRIBUTES) + _ransackers.keys

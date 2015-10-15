@@ -15,6 +15,7 @@ class SearchController < ApplicationController
       :software_engineering_methods,
       :software_engineering_methodologies,
       :evidence_source,
+      :evidence_source_participant_types,
       :evidence_source_bibtex_tags,
       :evidence_source_bibtex_type,
     ]
