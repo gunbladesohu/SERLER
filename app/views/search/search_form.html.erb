@@ -7,41 +7,46 @@
 <%= search_form_for @search_evidence_item, url: url_for(:controller => :search, :action => :index), method: :get do |f| %>
 
   <%# TODO delete this label after we have new test code %>
-  <%= f.label "Search for:", :for=>"q_c_2_v_0_value"%>
-  <p>Note: please leave content blank if you want to browse everything in that category.</p>
-
-  <p>
-    Methodologies:
-    <%= f.condition_fields do |builder| %>
-      <%= builder.attribute_fields do |a| %>
-        <%= a.attribute_select associations: [:software_engineering_methodologies]  %>
-      <% end %>
-      <%= builder.predicate_select %>
-      <%= builder.value_fields do |v| %>
-        <%= v.select :value, SoftwareEngineeringMethodology.all.collect{|p| p.name}, include_blank:true %>
-      <% end %>
-    <% end %>
-  </p>
-
-  <p>
-    Methods:
-    <%= f.condition_fields do |builder| %>
-      <%= builder.attribute_fields do |a| %>
-        <%= a.attribute_select associations: [:software_engineering_methods]  %>
-      <% end %>
-      <%= builder.predicate_select %>
-      <%= builder.value_fields do |v| %>
-        <%= v.select :value, SoftwareEngineeringMethod.all.collect{|p| p.name}, include_blank:true %>
-      <% end %>
-    <% end %>
-  </p>
-
+  <%# f.label "Search for:", :for=>"q_c_2_v_0_value"%>
+  <div class="panel panel-success">
+    <div class="panel panel-heading">Note: please leave content blank if you want to browse everything in that category.</div>
+    <div class="panel-body">
+      <p>Browse - please select item(s) to browse</p>
+      <p>
+        Methodologies:
+        <%= f.condition_fields do |builder| %>
+          <%= builder.attribute_fields do |a| %>
+            <%= a.attribute_select associations: [:software_engineering_methodologies]  %>
+          <% end %>
+          <%= builder.predicate_select %>
+          <%= builder.value_fields do |v| %>
+            <%= v.select :value, SoftwareEngineeringMethodology.all.collect{|p| p.name}, include_blank:true %>
+          <% end %>
+        <% end %>
+      </p>
+      <p>
+        Methods:
+        <%= f.condition_fields do |builder| %>
+          <%= builder.attribute_fields do |a| %>
+            <%= a.attribute_select associations: [:software_engineering_methods]  %>
+          <% end %>
+          <%= builder.predicate_select %>
+          <%= builder.value_fields do |v| %>
+            <%= v.select :value, SoftwareEngineeringMethod.all.collect{|p| p.name}, include_blank:true %>
+          <% end %>
+        <% end %>
+      </p>
+    </div>
+<div class="panel-footer">
+  <p>condition search</p>
   <%= f.condition_fields do |c| %>
     <%= render "condition_fields", f: c %>
   <% end %>
 
   <p><%= link_to_add_fields "Add Conditions", f, :condition %></p>
+  </div>
+  </div>
 
-  <div class="actions"><%= f.submit "Search" %></div>
+  <div class="actions"><%= f.submit "Search",class: 'btn btn-success' %></div>
 <% end %>
 </div>
