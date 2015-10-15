@@ -39,9 +39,6 @@ initialize_search_form = ->
 
 modify_search_field = ->
   $("form[id$='_search'] optgroup option[value='id']").remove()
-    
-  # hide database related item
-  $("[id$='_name'] option[value$='_at']").hide()
 
   # hide unecessary calculator
   $("[id$='_p'] option[value*='match']").hide()
@@ -73,7 +70,5 @@ select_dropbox_item = ->
     $(this).before($(this).data('fields').replace(regexp, time))
     modify_search_field()
     event.preventDefault()
-  
-  return
 
-  
+  return

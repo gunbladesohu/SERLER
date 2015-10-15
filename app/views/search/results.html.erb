@@ -12,8 +12,6 @@
       <th>software engineering methodology</th>
       <th>software engineering method</th>
       <th class="initially-hidden">source</th>
-      <th class="initially-hidden">modified</th>
-      <th class="initially-hidden">created</th>
     </tr>
   </thead>
     <% @evidence_items.each do |e| %>
@@ -27,8 +25,6 @@
           <%= e.software_engineering_methods.map(&:name).join(", ") %>
         </td>
         <td><%= e.evidence_source %></td>
-        <td><%= e.updated_at %></td>
-        <td><%= e.created_at %></td>
       </tr>
     <% end %>
 </table>
