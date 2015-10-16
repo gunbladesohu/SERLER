@@ -28,31 +28,37 @@ class SearchController < ApplicationController
       return
     end
 
-    if params[:saved_search_result]
-      @saved_search_result = SavedSearchResult.new(params[:saved_search_result])
-      if @saved_search_result.save
-        flash[:success] = "Search result saved as '#{@saved_search_result.name}'."
-        redirect_to :back
-        return
-      end
-    else
-      @saved_search_result = SavedSearchResult.new
+    @saved_search_result = save_from_form(params, :saved_search_result,
+                                          SavedSearchResult, :name)
+    unless @saved_search_result.id.nil?
+      redirect_to :back
+      return
     end
 
-    if params[:saved_search_query]
-      @saved_search_query = SavedSearchQuery.new(params[:saved_search_query])
-      if @saved_search_query.save
-        flash[:success] = "Search query saved as '#{@saved_search_query.name}'."
-        redirect_to :back
-        return
-      end
-    else
-      @saved_search_query = SavedSearchQuery.new
+    @saved_search_query = save_from_form(params, :saved_search_query,
+                                          SavedSearchQuery, :name)
+    unless @saved_search_query.id.nil?
+      redirect_to :back
+      return
     end
 
     @evidence_items = @search_evidence_item.result(distinct: true)
     render 'results'
     return
+  end
+
+  def save_from_form(params, params_key, model_klass,
+                     model_friendly_id_attribute)
+    if params[params_key]
+      instance = model_klass.new(params[params_key])
+      if instance.save
+        flash[:success] = "#{model_klass.model_name.human} " \
+          "'#{instance.send model_friendly_id_attribute}' stored successfully."
+      end
+    else
+      instance = model_klass.new
+    end
+    return instance
   end
 
 end
