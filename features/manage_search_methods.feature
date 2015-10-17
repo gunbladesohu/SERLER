@@ -13,3 +13,4 @@ Background:
 
 Scenario: View
     Then I should see name description of evidence item related "scrum" and "test driven development" in methods
+
