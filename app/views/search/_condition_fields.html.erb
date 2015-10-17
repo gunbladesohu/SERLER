@@ -1,8 +1,11 @@
 <div class="field">
+	<span class="panel-search-text">Search by :</span>
   <%= f.attribute_fields do |a| %>
     <%= a.attribute_select associations: @SEARCH_ASSOCIATIONS %>
   <% end %>
+	<span class="panel-search-text">Criteria : </span>
   <%= f.predicate_select only: @SEARCH_PREDICATES, compounds: false %>
+	<span class="panel-search-text">Additional info: </span>
   <%= f.value_fields do |v| %>
       <%= v.text_field :value %>
   <% end %>

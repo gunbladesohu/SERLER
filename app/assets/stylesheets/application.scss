@@ -116,6 +116,10 @@ position:relative;
 float:left;
 padding:10px;
 }
+.panel-search-text{
+color:$text-color;
+padding:10px;
+}
 @media screen and (max-width:768px){
 
         .search-input-group{
