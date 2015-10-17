@@ -9,5 +9,5 @@
   <%= f.value_fields do |v| %>
       <%= v.text_field :value %>
   <% end %>
-  <%= link_to "remove", '#', class: "remove_fields" %>
+  <%= link_to '<div class="glyphicon glyphicon-minus panel-icon"></div>' .html_safe, '#', class: "remove_fields" %>
 </div>
