@@ -18,6 +18,10 @@ Then(/^I should not see "(.*?)"$/) do |arg1|
   expect(page).to have_no_content /arg1/i
 end
 
+Then(/^I should see "(.*?)" in css$/) do |arg|
+  should have_css(arg)
+end
+
 Then(/^I should see results in a table$/) do
   assert page.assert_selector('table')
 end
