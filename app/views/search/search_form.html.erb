@@ -11,8 +11,8 @@
   <div class="panel panel-success">
     <div class="panel panel-heading">Note: please leave content blank if you want to browse everything in that category.</div>
     <div class="panel-body">
-      <p>Browse - please select item(s) to browse</p>
-      <p>
+      <p class="panel-body-header">Browse - please select item(s) to browse</p>
+      <p class="panel-body-select">
         Methodologies:
         <%= f.condition_fields do |builder| %>
           <%= builder.attribute_fields do |a| %>
@@ -24,7 +24,7 @@
           <% end %>
         <% end %>
       </p>
-      <p>
+      <p class="panel-body-select">
         Methods:
         <%= f.condition_fields do |builder| %>
           <%= builder.attribute_fields do |a| %>
@@ -38,7 +38,7 @@
       </p>
     </div>
 <div class="panel-footer">
-  <p>condition search</p>
+  <p style="text-transform:uppercase;" class="panel-body-header">condition search</p>
   <%= f.condition_fields do |c| %>
     <%= render "condition_fields", f: c %>
   <% end %>

@@ -106,6 +106,16 @@ padding:8px;
 width:80%;
 }
 
+.panel-body-header{
+color: $text-color;
+text-align:center;
+font-size:20px;
+}
+.panel-body-select{
+position:relative;
+float:left;
+padding:10px;
+}
 @media screen and (max-width:768px){
 
         .search-input-group{
