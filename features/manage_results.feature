@@ -12,3 +12,6 @@ Feature: Sort Results
   Scenario: Sort
     Given I click on a "result" column
     Then I should see results resorted
+
+  Scenario: irrelevant data
+    Then I should not see date column
