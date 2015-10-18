@@ -13,7 +13,7 @@
     <div class="panel-body">
       <p class="panel-body-header">Browse - please select item(s) to browse</p>
       <p class="panel-body-select">
-        <span class="panel-search-text">Methodologies:</span>
+        <span class="panel-search-text">Software Engineering Methodologies:</span>
         <%= f.condition_fields do |builder| %>
           <%= builder.attribute_fields do |a| %>
             <%= a.attribute_select associations: [:software_engineering_methodologies]  %>
@@ -25,7 +25,7 @@
         <% end %>
       </p>
       <p class="panel-body-select">
-        <span class="panel-search-text">Methods:<span>
+        <span class="panel-search-text">Software Engineering Methods:<span>
         <%= f.condition_fields do |builder| %>
           <%= builder.attribute_fields do |a| %>
             <%= a.attribute_select associations: [:software_engineering_methods]  %>
