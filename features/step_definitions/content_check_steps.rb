@@ -19,7 +19,7 @@ Then(/^I should not see "(.*?)"$/) do |arg1|
 end
 
 Then(/^I should see "(.*?)" in css$/) do |arg|
-  should have_css(arg)
+  expect(page).to have_css(arg)
 end
 
 Then(/^I should see results in a table$/) do
